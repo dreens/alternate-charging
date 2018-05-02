@@ -1,6 +1,6 @@
 %% Solve Capacitance Matrix
 
-V0 = 25e3*[-1 -1 1 -1]/2;
+V0 = 25e3*[-.5 .5 .5 -.5];
 R = 1.6e3;
 Rb = 100;
 times = linspace(0,2e-6,1e3);
@@ -8,18 +8,12 @@ times = linspace(0,2e-6,1e3);
 
 figure;
 Pb = ((V0-V)/R).^2*Rb;
-Eb = trapz(t,Pb);
-plot(t*1e6,Pb*1e-3,'LineWidth',2)
-xlabel('Time, (\mus)','FontSize',16)
-ylabel('Power (kW)','FontSize',16)
-r = {};
-for i=1:4
-    r{i} = sprintf('Rod %d, E = %1.1f mJ',i,1e3*Eb(i));
-end
-a = legend(r{1},r{2},r{3},r{4});
-set(a,'FontSize',16);
-set(gca,'FontSize',16);
-title('++gg to gg+-','FontSize',16)
+Eb = trapz(t,Pb)
+plot(t*1e6,Pb*1e-3)
+xlabel('Time, (\mus)')
+ylabel('Power (kW)')
+legend('Rod 1, ','Rod 2','Rod 3','Rod 4')
+title('+-gg to gg+-')
 grid on
 
 function Vp = oVRC(t,V,V0,R)
