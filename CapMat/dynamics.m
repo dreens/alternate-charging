@@ -1,6 +1,6 @@
 %% Solve Capacitance Matrix
 
-V0 = 25e3*[-1 -1 1 -1]/2;
+V0 = 25e3*[-1 -1 2 0]/2;
 R = 1.6e3;
 Rb = 100;
 times = linspace(0,2e-6,1e3);
@@ -19,7 +19,7 @@ end
 a = legend(r{1},r{2},r{3},r{4});
 set(a,'FontSize',16);
 set(gca,'FontSize',16);
-title('++gg to gg+-','FontSize',16)
+title('++-- to gg+-','FontSize',16)
 grid on
 
 function Vp = oVRC(t,V,V0,R)
