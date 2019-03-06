@@ -1,0 +1,12 @@
+#!\bin\bash
+
+file=alternatecharging
+git show HEAD~2:${file}.tex > lookatold.tex
+latexdiff lookatold.tex ${file}.tex > diff.tex
+cp ${file}.bib diff.bib
+cp ${file}Notes.bib diffNotes.bib
+pdflatex diff
+bibtex diff||true
+pdflatex diff
+pdflatex diff
+open -a Preview diff.pdf

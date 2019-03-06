@@ -142,8 +142,8 @@ s = fitoptions('Method','NonlinearLeastSquares',...
 f = fittype('a*exp(-(x-b).^2/2/c^2)','options',s);
 [c2,gof2] = fit(evap_time,trajectory_sub'/100,f);
 er = confint(c2);
-erc = (er(2,3) - er(1,3))/2;
-era = (er(2,1) - er(1,1))/2;
+erc = (er(2,3) - er(1,3))/4;
+era = (er(2,1) - er(1,1))/4;
 fitx=2000:0.1:5000;
 plot(fitx+x_axis_shift,c2(fitx),'Color',color,'DisplayName','fitting')
 
