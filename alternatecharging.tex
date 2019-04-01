@@ -64,9 +64,18 @@ prl,
 
 \date{\today}
 
+%%%%%%%%%%%%%%%%%%%%%
+% OUTLINE 
+%%%%%%%%%%%%%%%%%%%%%
+% Introduction
+% Effective Moving Trap
+% Alternate Charging Technique
+% Experimental Validation
+% Further Simulation Results
+
 
 %%%%%%%%%%%%%%%%%%%%%
-%ABSTRACT
+% ABSTRACT
 %%%%%%%%%%%%%%%%%%%%%
 \begin{abstract}
 Since its first realization, Stark deceleration has unlocked incredible new opportunities for the control of molecular beams. 
@@ -83,7 +92,8 @@ Our technique offers many-fold increases in molecule number at all final speeds,
 %     INTRODUCTION
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \section{Introduction}
-Over the past two decades, Stark deceleration has enabled groundbreaking collisional~\cite{Sawyer2011,Kirste2012,Gao2018} and spectroscopic~\cite{Veldhoven2004,Hudson2006,Lev2006,Fast2018} studies of a variety of species~\cite{VanDeMeerakker2012}. Subsequent trap-loading greatly enhances interrogation time for such studies~\cite{Sawyer2008} and opens the door for further cooling and manipulation~\cite{Stuhl2012evap, Reens2017}. 
+Over the past two decades, Stark deceleration has enabled groundbreaking collisional~\cite{Sawyer2011,Kirste2012,Gao2018} and spectroscopic~\cite{Veldhoven2004,Hudson2006,Lev2006,Fast2018} studies of a variety of species~\cite{VanDeMeerakker2012}. 
+Subsequent trap-loading greatly enhances interrogation time for such studies~\cite{Sawyer2008} and opens the door for further cooling and manipulation~\cite{Stuhl2012evap, Reens2017}. 
 Alongside the history of achievements enabled by Stark deceleration runs a parallel ongoing saga surrounding their efficient operation. 
 Many important steps have been made, not only in understanding the flaws of the canonical pulsed decelerator~\cite{VanDeMeerakker2006,Sawyer2008a}, but also in addressing them through the use of overtones~\cite{VanDeMeerakker2005a,Scharfenberg2009}, undertones~\cite{Zhang2016}, or even mixed phase angles~\cite{Parazzoli2009,Hou2013}. 
 Even with these advances, the outstanding inefficiencies of the pulsed decelerator, particularly with regard to transverse phase stability, have motivated alternative geometries such as interspersed quadrupole focusing~\cite{Sawyer2008a} and traveling wave deceleration~\cite{Osterwalder2010,VandenBerg2014,Fabrikant2014}. 
@@ -103,26 +113,63 @@ This schematic illustrates alternate voltage configurations which can be used al
 \label{fig:chargecartoon}
 \end{figure}
 
-\section{The Effective Moving Trap}
-%One of the key motivations for improvement of the conventional pulsed decelerator operation are its well-known failings as far as phase-space stability is concerned. These have been described in terms of transverse-longitudinal couplings~\cite{VanDeMeerakker2006}, small separatrix area at high phase angles~\cite{Hudson2004}, or reflection at low velocities~\cite{Sawyer2008a}. 
-We begin by introducing a new metric for the performance of a decelerator and its operation mode: the minimum depth of its effective moving trap. 
-The computation of the effective pendulum-like trapping force experienced by molecules in the restricted problem of their on-axis motion is completely standard~\cite{Bethlem2000,Hudson2004}, but the full 3D effective restoring force has not been reported previously for pulsed devices. 
-We compute this in Appendix~\ref{app:effpot} and use it to numerically evaluate minimum depths over various phase angles and operation modes in Fig.~\ref{fig:efftrap}. 
-Equipotential surfaces for these effective traps are also shown in Fig.~\ref{fig:chargecartoon}. It is found that the worst-case depth for S=1 is in fact incredibly small. In particular, molecules that deviate transversely from the synchronous molecule along the $x$ and $y$ axes experience almost no trap at all. 
-This can be considered the underlying reason for the transverse-longitudinal coupling problem that has been described~\cite{VanDeMeerakker2006}. Such couplings are in some contexts useful for maintaining ergodicity in a trapping geometry~\cite{Surkov1996}, but with one dimension featuring a very low energy barrier, they lead to unwanted loss.
-
-To address this, we mix alternate charge configurations into the deceleration scheme that feature strong restoring force in the transverse directions. 
-This restoring force averages into the effective moving trap, leading to the dramatic improvements over S=1 shown in Fig.~\ref{fig:efftrap}. 
+\section{Alternate Charging Technique}
+Our solution to the transverse phase space problem is to mix alternate charge configurations into the deceleration scheme that feature strong restoring force in the transverse directions, refer to Fig.~\ref{fig:chargecartoon}.
+%This restoring force averages into the effective moving trap, leading to the dramatic improvements over S=1 shown in Fig.~\ref{fig:efftrap}. 
+In the canonical operating mode known as $S=1$~\cite{VanDeMeerakker2012}, molecules approach a charged pin-pair, climbing a hill in potential energy, which is then abruptly switched off, allowing molecules to then repeat the process without regaining that potential energy. 
+For reasons of stability, the abrupt switch must happen only partway up the potential energy hill, so that molecules that are too far ahead get more energy removed, and vice versa. But it follows that molecules waste a significant portion of their flight passing between grounded pins.
+Pins are always charged in bipolar pairs, and few field lines run toward grounded pin-pairs. 
 Useful alternate configurations are created by applying voltage in a way that is not balanced between adjacent pin pairs. 
-In the canonical operating mode~\cite{VanDeMeerakker2012}, the average voltage of the charged pin-pair is zero, and few field lines run toward the adjacent grounded pin-pair (Fig.~\ref{fig:chargecartoon}). 
 Once an imbalance exists, by charging up both pins in a pair to the same non-zero voltage, by only charging one pin in a pair, or even by unbalancing the decelerator power supplies~\cite{Hoekstra2018}, the field lines will run between pin-pairs. 
 Near the grounded pin-pair, these field lines create a focusing 2D quadrupole structure, much like this one used intentionally for trapping and controlling spin-flip losses~\cite{Reens2017}. 
-These alternate configurations can be implemented when the synchronous molecule is flying between the grounded pin pair, so that the longitudinal behavior is not affected.
-Including the alternate configurations corresponding to having only a single rod charged gives rise to the mode we term "strong focusing" (SF), and including the configuration where both pins are charged to the same voltage gives rise to "very strong focusing" (VSF).
+These alternate configurations can be implemented only when the synchronous molecule is flying between the grounded pin pair, so that the longitudinal behavior is not affected.
+Including the alternate configurations corresponding to having only a single rod charged gives rise to the mode we term "strong focusing" (SF), and including the configuration where both pins are charged to the same voltage gives rise to ``very strong focusing" (VSF). It is also possible to charge all pins at once, with one pair positive and the next negative. We refer to this as ``extremely strong focusing" (XSF).
 
-We also note the dramatic reduction in asymmetry afforded by these alternate configurations, especially as compared with traveling wave Stark deceleration.
-This can be attributed to the linear verse quadratic character of the effective moving trap potential in the traveling wave and pulsed devices, respectively. 
-The former becomes dramatically asymmetric when tilted by a deceleration force, while the latter is only shifted in its zero.
+\section{The Effective Moving Trap}
+The effective moving traps generated by different modes of operation can be compared so as to predict how well a given mode may be expected to perform.
+%One of the key motivations for improvement of the conventional pulsed decelerator operation are its well-known failings as far as phase-space stability is concerned. These have been described in terms of transverse-longitudinal couplings~\cite{VanDeMeerakker2006}, small separatrix area at high phase angles~\cite{Hudson2004}, or reflection at low velocities~\cite{Sawyer2008a}. 
+All non-dissipative deceleration schemes, whether pulsed or continuous, may be characterized by an effective moving trap. 
+For pulsed devices, this effective trap applies provided their speed $v$ satisfies $v/D >> f$, where $D$ is the distance between stages of the pulsed device, and $f$ is the oscillation frequency of molecules in the effective trap. The breakdown of the effective trap occurs at very low speeds ($~50\text{ m/s}$) relative to initial beam speeds, and is discussed further below.
+The effective trap for on-axis molecules in the longitudinal direction has been discussed at length~\cite{Bethlem2000,Hudson2004}, but computation of the full 3D effective trap has not been reported previously.
+We derive the 3D effective trap in Appendix~\ref{app:effpot}, and evaluate it numerically for various operation modes, see the equipotential surfaces in Fig.~\ref{fig:chargecartoon}.
+It is found that for $S=1$, the effective trap has holes. Molecules moving away from the trap center along the $x$ and $y$ axes experience almost no restoring force at all. 
+This can be considered the underlying reason for the transverse-longitudinal coupling problem that has been described~\cite{VanDeMeerakker2006}. 
+Such couplings are in some contexts useful for maintaining ergodicity in a trapping geometry~\cite{Surkov1996}, but with one dimension featuring a very low energy barrier, they lead to unwanted loss.
+
+\begin{figure}[t]
+\includegraphics[width=\linewidth]{full-three-panel.png}%
+\caption{
+Characterizing the effective moving trap under different modes of operation. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b) at $200$~km/s/s for modes capable of this and $67$~km/s/s otherwise.}
+\label{fig:efftrap}
+\end{figure}
+
+
+Motivated by the holes evident in $S=1$ mode, we introduce a new figure of merit that may be used to compare the performance of various modes of operation: the minimum depth of their effective moving traps.
+Specifically, we can compare traps according to their minimum depth, by which we mean the smallest energy above which a molecule with that energy can find a way out of the trap.
+Having a single value to characterize effective traps allows us to do so systematically across many modes and across many magnitudes of the applied deceleration, see Fig.~\ref{fig:efftrap}(a). Remarkably, SF mode offers comparable trap depth improvement to $S=3$, but with no sacrifice in deceleration capability. 
+The VSF and XSF modes make still more dramatic improvements, with the latter even rivaling traveling wave (TW) deceleration~\cite{}. 
+Note that for VSF and XSF, the alternate configurations are not utilized in a symmetric manner about the grounded pin pair as for SF. 
+Instead, allowing them to be used asymmetrically about the grounded pin pair opens up a new degree of freedom, which we optimize for each deceleration so as to maximize the minimum effective trap depth.
+
+We can make further use of the effective trap by directly employing it to simulate the fate of particles confined within for a length of time equal to $3\text{ ms}$ as shown in Fig.~\ref{fig:efftrap}(b), the duration of a typical deceleration sequence. 
+The results show a very close qualitative match to the trends predicted by the minimum trap depth. 
+The most notable exception is found in $S=1$ mode at low decelerations, where extremely deep holes dominate the minimum trap depth, but the small effective cross sectional area of the holes still allows molecules to survive in greater number than at higher decelerations where the minimum trap depth actually improves.
+It is also important to point out that the accepted phase space volume is not necessarily the most fair comparison between devices. 
+We report results for all modes other than $TW$ using the dimensions of our device, with $2\text{ mm}$ pin-pair spacings and therefore a $2x2\text{ mm}^2$ opening area.
+In contrast, $TW$ devices use $4\text{ mm}$ diameter rings, a factor of $\pi$ larger opening area.
+For trapping experiments, the phase space density is more important than volume, but for collisional experiments, the thing to do may be to only compare phase space volumes with $TW$ after first selecting a more advantageous pin-pair spacing such as used in these devices~\cite{}.
+
+The validity of using the effective trap in this manner depends on the final speed after the deceleration sequence.
+We study this by also performing a full Monte-Carlo simulation of the various deceleration modes, without use of the effective trap approximation.
+By varying only the final speed, and keeping deceleration and run-time exactly fixed by appropriately varying initial speed and decelerator length, we obtain the results shown in Fig.~\ref{fig:efftrap}(c). 
+The asymptotically flat profiles at high enough speeds validate the effective trap picture, as do the quantitative agreement between the asymptotic values and the corresponding points at $200\text{ km/s/s}$ and $67\text{ km/s/s}$ in Fig.~\ref{fig:efftrap}(b). 
+
+The beginning of the low-speed breakdown depends on the intended use of the decelerator, and especially how far the molecules will be expected to travel unguided afterwards. 
+In Fig.~\ref{fig:efftrap}(c), the molecules still confined within a $3\text{ mm}$ diameter circle after $5\text{ mm}$ free flight after the end of the sequence are shown. 
+This is a reasonable representation of what would be required for trap-loading, but for collisional experiments a much larger flight distance may be required.
+Note how $SF$ and $VSF$ cut off at even lower speeds than $S=1$, but $XSF$ cuts higher. 
+This can be attributed to the fact that $XSF$ actually features an increased trapping frequency relative to the others, while $SF$ and $VSF$ improve over $S=1$ mostly be plugging up holes and not by actually trapping at higher frequency.
+One important corollary is that $XSF$ may only be useful for trap loading with devices such as~\cite{} where a $TW$ device is already going to be used for the final slowing.
 
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{speedvary.png}%
