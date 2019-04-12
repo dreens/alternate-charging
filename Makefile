@@ -6,14 +6,14 @@ pdf:
 	bibtex ${filename}||true
 	pdflatex ${filename}
 	pdflatex ${filename}
-	open -a Preview ${filename}.pdf
+	open -a TexShop ${filename}.pdf
 
 supp:
 	pdflatex ${sname}
 	bibtex ${sname}||true
 	pdflatex ${sname}
 	pdflatex ${sname}
-	open -a Preview ${sname}.pdf
+	open -a TexShop ${sname}.pdf
 
 figs:
 	bash compile_figures
