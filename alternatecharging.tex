@@ -43,8 +43,8 @@ prl,
 \newcommand{\epbm}{{\vec{E}\s {\perp}\s\vec{B}}}
 \newcommand{\cmnt}[1]{\ignorespaces}
 \newcommand{\s}{{\nobreak\hspace{.2em}}}
-\newcommand{\SO}{{S=1 }}
-\newcommand{\ST}{{S=3 }}
+\newcommand{\SO}{{S=1}}
+\newcommand{\ST}{{S=3}}
 
 
 
@@ -110,7 +110,7 @@ Here we introduce a technique that works on a conventional system, but fully res
 \begin{figure}[ht!]
 \includegraphics[width=\linewidth]{chargecartoon.png}%
 \caption{
-This schematic illustrates alternate voltage configurations which can be used alongside the conventional one for greatly enhanced performance. Configurations B-D feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to \SO mode and its \ST overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced. Equipotentials of the effective trap during $\phi=45^\circ$ slowing are shown, with units appropriate for hydroxyl radicals.
+This schematic illustrates alternate voltage configurations which can be used alongside the conventional one for greatly enhanced performance. Configurations B-D feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to \SO\s mode and its \ST\s overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced. Equipotentials of the effective trap during $\phi=45^\circ$ slowing are shown, with units appropriate for hydroxyl radicals.
 }
 \label{fig:chargecartoon}
 \end{figure}
@@ -118,22 +118,21 @@ This schematic illustrates alternate voltage configurations which can be used al
 \section{Alternate Charging Technique}
 We mix alternate charge configurations into the deceleration scheme that feature strong restoring force in the transverse directions, refer to Fig.~\ref{fig:chargecartoon}.
 %This restoring force averages into the effective moving trap, leading to the dramatic improvements over S=1 shown in Fig.~\ref{fig:efftrap}. 
-In the canonical \SO operating mode~\cite{VanDeMeerakker2012}, molecules approach a charged pin-pair, climbing a hill in potential energy. 
+In the canonical \SO\s operating mode~\cite{VanDeMeerakker2012}, molecules approach a charged pin-pair, climbing a hill in potential energy. 
 The hill is abruptly switched off, allowing molecules to then repeat the process without regaining that potential energy.
-For reasons of stability, the abrupt switch must happen only partway up the potential energy hill, so that molecules that are too far ahead get more energy removed, and vice versa. 
-But it follows that molecules waste a significant portion of their flight passing between grounded pins.
-Pins are always charged in bipolar pairs, and few field lines run toward grounded pin-pairs. 
-Useful alternate configurations are created by applying voltage in a way that is not balanced between adjacent pin pairs. 
+For reasons of stability, the abrupt switch must happen only partway up the potential energy hill, so that molecules that are ahead get more energy removed, and vice versa. 
+But it follows that molecules spend a significant portion of their flight passing between grounded pins.
+Conventionally, pins are always charged in bipolar pairs, in which case few field lines run toward the grounded pin-pairs, and those that do create a slight defocusing effect. 
+Useful alternate configurations can be created by applying voltage in a way that is not balanced between adjacent pin pairs. 
 Once an imbalance exists, by charging up both pins in a pair to the same non-zero voltage, by only charging one pin in a pair, or even by unbalancing the decelerator power supplies~\cite{Hoekstra2018}, the field lines will run between pin-pairs. 
 Near the grounded pin-pair, these field lines create a focusing 2D quadrupole structure, much like this one used intentionally for trapping and controlling spin-flip losses~\cite{Reens2017}. 
-By implemented these configurations only when the synchronous molecule is flying between the grounded pin pair, and retaining the use of the conventional configuration for hill climbing, the longitudinal behavior of the device is not affected.
-Utilizing the alternate configuration of only charging a single rod gives rise to what we term ``strong focusing" (SF), and the configuration where both pins are charged to the same voltage gives rise to ``very strong focusing" (VSF). 
-It is even possible to charge as in VSF but with the grounded pair negative, giving rise to ``extremely strong focusing" (XSF).
+By implementing these configurations when the synchronous molecule is flying between the grounded pin pair, but retaining the use of the conventional configuration for hill climbing, the longitudinal behavior of the device is unaffected while the transverse behavior is vastly improved.
+Utilizing the alternate configuration of only charging a single rod gives rise to a new strongly focusing operation mode (SF), and utilizing the configuration where both pins are charged to the same voltage gives rise to a very strongly focusing mode (VSF). If all four pins are charged: one pair at one voltage and the next pair at the opposite voltage, we obtain an extremely strong focusing mode (XSF).
 
 \section{The Effective Moving Trap}
 The effective moving traps generated by different modes of operation can be compared so as to predict how well they will perform.
 %One of the key motivations for improvement of the conventional pulsed decelerator operation are its well-known failings as far as phase-space stability is concerned. These have been described in terms of transverse-longitudinal couplings~\cite{VanDeMeerakker2006}, small separatrix area at high phase angles~\cite{Hudson2004}, or reflection at low velocities~\cite{Sawyer2008a}. 
-Pulsed deceleration schemes, just like continuous ones, may be characterized by an effective moving trap, provided their speed $v$ satisfies $v >> f\cdot D$. 
+Pulsed deceleration schemes, just like continuous ones, may be characterized by an effective moving trap, provided their velocity satisfies $v/D >> f$. 
 Here $D$ is the distance between stages of the pulsed device, and $f$ is the oscillation frequency in the effective trap. 
 The breakdown of the effective trap occurs at very low speeds ($~50\text{ m/s}$) relative to initial beam speeds, and is discussed further below.
 The effective trap for on-axis molecules in the longitudinal direction has been discussed at length~\cite{Bethlem2000,Hudson2004}, but computation of the full 3D effective trap has not been reported previously.
@@ -151,22 +150,20 @@ Characterizing the effective moving trap under different modes of operation. In 
 \end{figure}
 
 
-Motivated by the holes evident in $S=1$ mode, we introduce a new figure of merit that may be used to compare the performance of various modes of operation: the minimum depth of their effective moving traps.
+Motivated by the holes evident in \SO\s mode, we introduce a new figure of merit that may be used to compare the performance of various modes of operation: the minimum depth of their effective moving traps.
 Specifically, we can compare traps according to their minimum depth, by which we mean the smallest energy above which a molecule with that energy can find a way out of the trap.
-Having a single value to characterize effective traps allows us to do so systematically across many modes and across many magnitudes of the applied deceleration, see Fig.~\ref{fig:efftrap}(a). Remarkably, SF mode offers comparable trap depth improvement to $S=3$, but with no sacrifice in deceleration capability. 
-The VSF and XSF modes make still more dramatic improvements, with the latter even rivaling traveling wave (TW) deceleration~\cite{}. 
+Having a single value to characterize effective traps allows us to do so systematically across many modes and across many magnitudes of the applied deceleration, see Fig.~\ref{fig:efftrap}(a). Remarkably, SF mode offers comparable trap depth improvement to \ST, but with no sacrifice in deceleration capability. 
+The VSF and XSF modes make still more dramatic improvements, with the latter even rivaling traveling wave (TW) deceleration~\cite{Osterwalder2010}. 
 Note that for VSF and XSF, the alternate configurations are not utilized in a symmetric manner about the grounded pin pair as for SF. 
 Instead, allowing them to be used asymmetrically about the grounded pin pair opens up a new degree of freedom, which we optimize for each deceleration so as to maximize the minimum effective trap depth.
 
 We can make further use of the effective trap by directly employing it to simulate the fate of particles confined within for a length of time equal to $3\text{ ms}$ as shown in Fig.~\ref{fig:efftrap}(b), the duration of a typical deceleration sequence. 
 The results show a very close qualitative match to the trends predicted by the minimum trap depth. 
-The most notable exception is found in $S=1$ mode at low decelerations, where extremely deep holes dominate the minimum trap depth, but the small effective cross sectional area of the holes still allows molecules to survive in greater number than at higher decelerations where the minimum trap depth actually improves.
-It is also important to point out that the accepted phase space volume is not necessarily the most fair comparison between devices. 
-We report results for all modes other than $TW$ using the dimensions of our device, with $2\text{ mm}$ pin-pair spacings and therefore a $2x2\text{ mm}^2$ opening area.
-In contrast, $TW$ devices use $4\text{ mm}$ diameter rings, a factor of $\pi$ larger opening area.
-For trapping experiments, the phase space density is more important than volume, but for collisional experiments, the thing to do may be to only compare phase space volumes with $TW$ after first selecting a more advantageous pin-pair spacing such as used in these devices~\cite{}.
+The most notable exception is found in \SO\s mode at low decelerations, where extremely deep holes dominate the minimum trap depth, but the small effective cross sectional area of the holes still allows molecules to survive in greater number than at higher decelerations where the minimum trap depth actually improves.
+As far as the comparison with TW is concerned, it is important to point out that we use the rather small $2\text{ mm}$ pin-pair spacing and $2$x$2\text{ mm}^2$ opening area of our device, while TW devices use $4\text{ mm}$ diameter rings.
+If XSF mode were used with this $3$x$3\text{ mm}^2$ device~\cite{Scharfenberg2009} or this $4$x$4\text{ mm}^2$~\cite{VandeMeerakker2005} device, phase space volume would increase with the cube of pin pair spacing, and deceleration capability would reduce to linear order, thus significantly outperforming TW. 
 
-The validity of using the effective trap in this manner depends on the final speed after the deceleration sequence.
+The validity of using the effective trap in this manner depends however on the final speed after the deceleration sequence.
 We study this by also performing a full Monte-Carlo simulation of the various deceleration modes, without use of the effective trap approximation.
 By varying only the final speed, and keeping deceleration and run-time exactly fixed by appropriately varying initial speed and decelerator length, we obtain the results shown in Fig.~\ref{fig:efftrap}(c). 
 The asymptotically flat profiles at high enough speeds validate the effective trap picture, as do the quantitative agreement between the asymptotic values and the corresponding points at $200\text{ km/s/s}$ and $67\text{ km/s/s}$ in Fig.~\ref{fig:efftrap}(b). 
@@ -174,9 +171,9 @@ The asymptotically flat profiles at high enough speeds validate the effective tr
 The beginning of the low-speed breakdown depends on the intended use of the decelerator, and especially how far the molecules will be expected to travel unguided afterwards. 
 In Fig.~\ref{fig:efftrap}(c), the molecules still confined within a $3\text{ mm}$ diameter circle after $5\text{ mm}$ free flight after the end of the sequence are shown. 
 This is a reasonable representation of what would be required for trap-loading, but for collisional experiments a much larger flight distance may be required.
-Note how $SF$ and $VSF$ cut off at even lower speeds than $S=1$, but $XSF$ cuts higher. 
-This can be attributed to the fact that $XSF$ actually features an increased trapping frequency relative to the others, while $SF$ and $VSF$ improve over $S=1$ mostly be plugging up holes and not by actually trapping at higher frequency.
-One important corollary is that $XSF$ may only be useful for trap loading with devices such as~\cite{} where a $TW$ device is already going to be used for the final slowing.
+Note how SF and VSF cut off at even lower speeds than S=1, but XSF cuts higher. 
+This can be attributed to the fact that XSF actually features an increased trap depth and trap frequency relative to the others, while SF and VSF improve over S=1 mostly by plugging holes and not by increasing the trap frequency.
+One important corollary is that XSF may only be useful for trap loading with devices such as~\cite{Quintero-Perez2013} where a TW device is already going to be used for the final slowing.
 
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{speedvary.png}%
@@ -208,14 +205,14 @@ The results are shown in Fig.~\ref{fig:holdtime}.
 Even for a very short decelerator designed to use Xenon buffer gas and slow close to rest, a total hold-time of $2\text{ ms}$ still results in a factor of $2.5$ enhancement by using SF mode.
 
 \section{Results in VSF Mode}
-With some investment, we have also implemented the ability to run VSF mode thanks to a liquid cooled tri-state switch capable of switching quickly and frequently between all three output states~\footnote{Behlke HTS-301-151-SiC, options HFB, ILC, ALL-OFF-BIPOLAR.}. This is also compared against other modes in Fig.~\ref{fig:VSF}. With a second such switch, and extra voltage conditioning, it would be possible to admix a charge configuration where all four rods are turned on, with one pin-pair charged positively and the other negatively, extremely strong focusing (XSF) mode if you will. This isn't worth implementing in our system, because the transverse trap becomes so deep that the problem of overfocusing at low speeds is exacerbated. However for systems designed to utilize a combination pulsed and ring decelerator~\cite{Quintero-Perez2013}, this may be ideal.
+With some investment, we have also implemented the ability to run VSF mode thanks to a liquid cooled tri-state switch capable of switching quickly and frequently between all three output states~\footnote{Behlke HTS-301-151-SiC, options HFB, ILC, ALL-OFF-BIPOLAR.}. This is also compared against other modes in Fig.~\ref{fig:VSF}. With a second such switch, and extra voltage conditioning, it would be possible to study XSF mode. We do not implement this due to the higher cutoff velocity for this mode.
 
 \section{Further Simulation Results}
-Here we utilize Monte-Carlo Simulation to further investigate some important details that are not easily accessed experimentally, namely the phase space distribution under different operating modes, and the long-time behavior of molecules in the effective moving trap.
+It is also useful to investigate the phase space distributions reported by monte-carlo simulation.
 In Fig.~\ref{fig:phasespace}, the longitudinal phase space filling is compared for S=1, SF, VSF, and S=3. 
 As can be seen, density is nearly uniform for all modes except S=1, as expected since all other modes feature a reasonable effective moving trap that lacks small holes. 
 Density appears highest for VSF, and comparable for S=3 and SF. 
-This follows our assertion that the effective moving trap depth can be used as a good proxy for decelerator sequence performance. 
+This follows our assertion that the effective moving trap depth can be used as a good proxy for decelerator sequence performance.
 
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{S=1_SF_VSF.png}
@@ -242,11 +239,13 @@ This situation makes possible transitions that preserve parity but change the $m
 Molecular states chosen for Stark deceleration typically feature total $J>1/2$, in which case there exist states with less than maximal $|m|$ to which transitions can occur resulting in dramatically reduced strength of Stark forces applied by the decelerator.
 For the case of OH Molecules, $J=3/2$, and estimations of the magnitude of spin-flip transitions suggest that it could be as large as a $50\%$ effect in our device. 
 However, in practice, deviations from the ideal geometry tend to greatly reduce the risk of spin-flip transitions, because for example slight nonzero angles between pins, or length differences, tend to cause the unintentional removal of electric field minima.
+In our device, we find no detectable influence of spin-flip losses, based on good agreement between data and monte-carlo without including their effect.
+This could be ensured by intentionally imbalancing the lengths of pin-pairs, so that one pair has rods that are a few millimeters longer than the other. A $3$~mm imbalance would be sufficient to pull the electric field zero completely out of the flight path of the molecules. 
 
 \section{Extensions}
-Besides XSF mode, mentioned above, several other direct extensions of our results are worth mentioning. Firstly, at low phase angles, we note that it is in general not worth the effort to mix in configurations $A$ and $A'$ of Fig.~\ref{fig:chargecartoon}, and good results can be achieved with only ever having a single rod charged at a time for SF Mode. In the case of VSF mode, one can quite efficiently run a decelerator at low phase angles with only a single HV switch, by switching between configuration $D$ and configuration $0$, where only a small orientation preserving voltage is applied.
+Besides XSF mode, mentioned above, several other direct extensions of our results are worth mentioning. Firstly, at low phase angles, we note that it is in general not worth the effort to mix in configurations $A$ and $A'$ of Fig.~\ref{fig:chargecartoon}, and good results can be achieved with only ever having a single rod charged at a time as in SF Mode. In the case of VSF mode, one can quite efficiently run a decelerator at low phase angles with only a single HV switch, by switching between configuration $D$ and configuration $0$, where only a small orientation preserving voltage is applied.
 
-For those interested in extending results in the direction of VSF mode but without tri-polar switches, gains can be made by admixing the configuration with all four rods charged to their normal voltages, also discussed as $\text{S}=3^+$ mode in Ref.~\cite{hudsonthesis}. Switching between the charge configurations ++-- and +-+- could be achieved with only two HV switches, and also affords XSF-like performance.
+For those interested in extending results in the direction of VSF mode but without tri-polar switches, gains can be made by admixing the configuration with all four rods charged to their normal voltages, also discussed as $\text{S}=3^+$ mode in Ref.~\cite{HudsonThesis2006}. Switching between the XSF configuration and the configuration with all pins charged at their normal voltages could be achieved with only two HV switches, and also affords XSF-like performance.
 
 Even restricting attention to the SF and VSF modes discussed primarily in this work, there is the possibility of tuning when the alternate configurations are applied and for how long. 
 We have studied this to some extent and found that applying the alternate configurations symmetrically about the grounded pin pair worked within 10\% of the optimum we could obtain by more carefully studying the space of possible timings.
@@ -255,7 +254,13 @@ In general however, one could imagine much more thoroughly studying the space of
 Finally, we add that it may even be that a brand new electrode configuration is more well-suited for capitalizing on the gains afforded by the use of alternate charge configurations. The obvious direction would be to keep the pulsed design but somehow curve or change the pin arrangement so that the alternate configurations would feature even better focusing, without too dramatically reducing the magnitude of the large electric field that can be applied within a single stage in the usual configuration.
 
 \section{Conclusion}
-When considering the wealth of accomplishments and the depth of achievement present in our group, it is certain that we are incredibly legitimate and that our legitimacy is in fact very solid and well founded. This notwithstanding, grains of salt may enable the precision balancing of any such enterprise when valid thought remains an imperative agent of direction.
+Several new operation modes for the conventional pulsed decelerator have been introduced, which make use of alternate charge configurations and yield significant improvements in transverse focusing and overall phase space performance.
+These modes do not simply increase the temperature of molecules which may be decelerated.
+Instead, by plugging holes in the transverse direction of the effective moving trap, these operating modes retain greater numbers of molecules at the same temperatures as before.
+This discovery opens up brand new possibilities for applying Stark deceleration to much faster beams or to molecules with less favorable Stark shift to mass ratios, since decelerator lengths and runtimes may now be extended without suffering from transverse trap leakage.
+
+
+%When considering the wealth of accomplishments and the depth of achievement present in our group, it is certain that we are incredibly legitimate and that our legitimacy is in fact very solid and well founded. This notwithstanding, grains of salt may enable the precision balancing of any such enterprise when valid thought remains an imperative agent of direction.
 
 
 
