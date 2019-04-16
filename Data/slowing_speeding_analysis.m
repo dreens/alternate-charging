@@ -158,15 +158,35 @@ xlabel('Final Speed (m/s)')
 ylabel('Enhancement Ratio')
 grid on
 
-
+%%
 figure
+vfs = 50:50:1200;
 sf = peaks(:,2);
 s1 = peaks(:,1);
+vfs3 = 550:50:900;
+s3 = (s1(1:3:end) + 2*sf(1:3:end))/2;
 hold on
-h1 = errorbar(vfs',sf,sqrt(sf)/sqrt(100),'bo--');
-h2 = errorbar(vfs',s1,sqrt(s1)/sqrt(100),'ro--');
-title('S=1, SF various Final Speeds')
+h1 = errorbar(vfs',s1,sqrt(s1)/sqrt(100),'o--');
+h2 = errorbar(vfs3',s3,sqrt(s3)/sqrt(100),'o--');
+h3 = errorbar(vfs',sf,sqrt(sf)/sqrt(100),'o--');
+%title('S=1, SF various Final Speeds')
 xlabel('Final Speed (m/s)')
 ylabel('Peak Time of Flight')
 grid on
+
+% Going to run with the separate traces and add mock data for VSF for now.
+vsf = peaks(:,2)*2.5;
+vfs = 50:50:1250;
+vsf(end-2:end+1) = [12 9 5 0];
+
+h4 = errorbar(vfs',vsf,2*sqrt(vsf)/sqrt(100),'o--');
+
+set(gca,'FontSize',13)
+set(gca,'LineWidth',2)
+set(gca,'TickLength',[.02 .05])
+
+name = 'Data-Figure-Final-Speed';
+print(gcf,'Data-Figure-Final-Speed','-dpng','-r300')
+system('open .png')
+system('cp Figures/5x2-PSD-Compare.png ../alternate-charging/')
 
