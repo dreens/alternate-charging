@@ -110,7 +110,7 @@ Here we introduce a technique that works on a conventional system, but fully res
 \begin{figure}[ht!]
 \includegraphics[width=\linewidth]{chargecartoon.png}%
 \caption{
-This schematic illustrates alternate voltage configurations which can be used alongside the conventional one for greatly enhanced performance. Configurations B-D feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to \SO\s mode and its \ST\s overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced. Equipotentials of the effective trap during $\phi=45^\circ$ slowing are shown, with units appropriate for hydroxyl radicals.
+This schematic illustrates alternate voltage configurations which can be used alongside the conventional one for greatly enhanced performance. Configurations B-D feature strong transverse focusing in the regions where molecules would normally pass between grounded pin pairs. On-axis energy diagrams are shown for several modes of operation incorporating these alternate configurations, with primes indicating translation to the next pin pair. In addition to \SO\s mode and its \ST\s overtone~\cite{VanDeMeerakker2005a}, a strong focusing (SF) and a very strong focusing (VSF) mode are introduced. Equipotentials of the effective trap during $\phi=45^\circ$ slowing are shown, with units appropriate for hydroxyl radicals.\vspace{-4mm}
 }
 \label{fig:chargecartoon}
 \end{figure}
@@ -146,7 +146,7 @@ Such couplings are in some contexts useful for maintaining ergodicity in a trapp
 \includegraphics[width=\linewidth]{full-three-panel.png}%
 \vspace{-5pt}
 \caption{
-Characterizing the moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and extremely strong focusing (XSF) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b).}
+Characterizing the moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and extremely strong focusing (XSF) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b).\vspace{-4mm}}
 \label{fig:efftrap}
 \end{figure}
 
@@ -175,25 +175,34 @@ Note how SF and VSF cut off at even lower speeds than S=1, but XSF cuts higher.
 This can be attributed to the fact that XSF actually features an increased transverse trap frequency relative to the others, while SF and VSF improve over S=1 mostly by plugging holes and not by increasing the trap's depth or frequency.
 XSF mode may only be useful for trap loading in combination with a TW device as in~\cite{Quintero-Perez2013}.
 
-\begin{figure}[t]
-\includegraphics[width=\linewidth]{speedvary.png}%
+%\begin{figure}[t]
+%\includegraphics[width=\linewidth]{speedvary.png}%
+%
+%\includegraphics[width=\linewidth]{Data/ratio-combined.png}%
+%\label{fig:speedvary}
+%\caption{
+%(a). Simulation traces and data points are shown for both SF and S=1 mode at various final speeds. 
+%The data are collected with a $333$ stage decelerator and a beam of OH radicals expanded in Neon at an initial speed of $820\text{ m/s}$. 
+%The ratio $\eta$ of peak detected molecules between SF and S=1 are listed for each speed. 
+%It is seen that large gains persist even down to final speeds appropriate for trap loading.
+%(b).~Efficiency as a function of final speed. Increased symmetry of the effective moving trap at low phase angles for S=1 mode allow it to run with less loss relative to SF mode, causing the dip close to $v_f=800\text{ m/s}$. For accelerations, larger magnitude phase angles close to $-90^\circ$ are possible in our device. Here SF approaches S=1 because the normal charge configuration is required at almost all times to remove enough energy per stage.
+%}
+%\end{figure}
 
-\includegraphics[width=\linewidth]{Data/ratio-combined.png}%
-\label{fig:speedvary}
+\begin{figure}[t]
+\includegraphics[width=\linewidth]{Data/Data-Figure-Final-Speed.png}%
+\label{fig:alldata}
 \caption{
-(a). Simulation traces and data points are shown for both SF and S=1 mode at various final speeds. 
-The data are collected with a $333$ stage decelerator and a beam of OH radicals expanded in Neon at an initial speed of $820\text{ m/s}$. 
-The ratio $\eta$ of peak detected molecules between SF and S=1 are listed for each speed. 
-It is seen that large gains persist even down to final speeds appropriate for trap loading.
-(b).~Efficiency as a function of final speed. Increased symmetry of the effective moving trap at low phase angles for S=1 mode allow it to run with less loss relative to SF mode, causing the dip close to $v_f=800\text{ m/s}$. For accelerations, larger magnitude phase angles close to $-90^\circ$ are possible in our device. Here SF approaches S=1 because the normal charge configuration is required at almost all times to remove enough energy per stage.
+Experimental data are collected with a $333$ stage decelerator and a beam of OH radicals expanded in Neon at an initial speed of $820\text{ m/s}$. 
+Large gains persist even down to final speeds appropriate for trap loading, with VSF outperforming S=1 at $50\text{ m/s}$ elevenfold.
+Larger accelerations than decelerations are possible in the device, demonstrating the increased range of VSF. 
 }
 \end{figure}
 
 
 %\section{Results in SF Mode}
-Our main results using SF mode are shown in Fig.~\ref{fig:speedvary}.
-We emphasize that to achieve operation in this mode, no wiring changes are required relative to canonical operation, and the total number of state transitions driven by each high-voltage switch remains the same. 
-The turn-on and turn-off times of switches usually driven in a pair are simply misaligned with one other by a calculated amount.
+Our main experimental results are shown in Fig.~\ref{fig:alldata}.
+We emphasize that to achieve SF mode, no wiring changes are required relative to canonical operation, and the total number of state transitions driven by each high-voltage switch remains the same. 
 In both simulation and experiment we find at least fourfold enhancements across a wide range of final speeds by using SF mode, where the alternate charging configuration of having only one pin charged is admixed. 
 The slowest speeds shown are typical in a system such as ours designed to provide molecules that are one pulse away from being trapped. 
 The agreement between experiment and Monte-Carlo simulation further confirms that our observations stem from the proposed mechanism and not any other pathological performance issues of the traditional operation mode in our system.
