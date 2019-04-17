@@ -83,8 +83,8 @@ prl,
 Since its first realization, Stark deceleration has unlocked incredible new opportunities for the control of molecular beams. 
 Numerous trapping and collisional studies have been performed, and several important extensions to the technique have been developed. 
 In particular, traveling-wave deceleration improves on the original pulsed deceleration technique by providing a true moving trap, and a corresponding dramatic increase in phase space acceptance.
-In this work, we introduce an alternative charging strategy that brings a conventional pulsed electrode array much closer to a true moving trap decelerator, and even allows it to exceed traveling-wave devices in phase space acceptance and trap uniformity.
-Our technique offers many-fold increases in molecule number at all final speeds, with only minor adjustments to the timing of the device.
+In this work, we introduce an alternative charging strategy that brings a conventional pulsed electrode array much closer to a true moving trap decelerator, and even allows it to exceed traveling-wave devices in phase space acceptance.
+Our strategy offers many-fold performance improvements across all useful operating conditions for Stark deceleration, including ten-fold increases in molecule number at trappable final velocities.
 \end{abstract}
 
 \maketitle
@@ -289,33 +289,33 @@ This discovery opens up brand new possibilities for applying Stark deceleration 
 \bibliographystyle{apsrev4-1_no_Arxiv}
 \bibliography{alternatecharging}
 
-\appendix
-
-\section{Effective Moving Trap Derivation\label{app:effpot}}
-\begin{equation}
-m\ddot{x}=\frac{\partial V}{\partial x}\approx \frac{\partial}{\partial x}\frac{1}{2t_0}\int\limits_{t-t_0}^{t+t_0}V(x(t),t)dt
-\end{equation}
-\begin{equation}
-W(x,y,\bar{z}) = \frac{1}{2\pi}\int\limits_{z_0+\bar{z}}^{z_0+L+\bar{z}}V(x,y,z)dz, 
-\end{equation}
-Copied out of the main text:
-\begin{equation}
-W(x,y,z^*) = - maz^* + \frac{1}{L}\int\limits_{z^*}^{z^*+L}V(x,y,z) dz,
-\end{equation}
-with $W$ the effective potential energy defined in coordinates relative to the synchronous molecule at the center of the effective moving trap, $V$ the potential energy in real space coordinates, $L$ the length of a deceleration stage, $a$ the average acceleration experienced by the synchronous molecule, $m$ the mass of a molecule, and a longitudinal coordinate $z$ which has $z=0$ at the location where the synchronous molecule sits during a switching event.
-
-where $z$ points along the decelerator axis, $V$ is the lab-frame potential energy induced via the Stark effect on the molecule and applied during propagation of the synchronous molecule from position $z_0$ to $z_0+L$, and $\bar{z}$ is the non-inertial transform from the lab-frame: 
-\begin{equation}
-\bar{z} = z + v_0 t - \frac{1}{2}a t^2.
-\end{equation}
-
-\begin{multline}
-W(x,y,z^*) = - maz^* + 
-\frac{1}{L'}\!\!\int\limits_{z^*}^{z^*+L'}\!\!V'(x,y,z) dz \\
-+\frac{1}{L-L'}\!\!\int\limits_{z^*+L'}^{z^*+L}\!\!V(x,y,z) dz,\hspace{2cm}
-\end{multline}
-where $V'$ represents the lab-frame Stark potential induced by the alternative charge configuration, and $L'$ gives twice the distance required for the synchronous molecule to fly from its longitudinal position during a switch event, to the center of the approaching pin pair which would have been grounded under S=1 operation. This hardly changes the longitudinal behavior of the device, but adds significant transverse depth to the effective moving trap.
-
+%\appendix
+%
+%\section{Effective Moving Trap Derivation\label{app:effpot}}
+%\begin{equation}
+%m\ddot{x}=\frac{\partial V}{\partial x}\approx \frac{\partial}{\partial x}\frac{1}{2t_0}\int\limits_{t-t_0}^{t+t_0}V(x(t),t)dt
+%\end{equation}
+%\begin{equation}
+%W(x,y,\bar{z}) = \frac{1}{2\pi}\int\limits_{z_0+\bar{z}}^{z_0+L+\bar{z}}V(x,y,z)dz, 
+%\end{equation}
+%Copied out of the main text:
+%\begin{equation}
+%W(x,y,z^*) = - maz^* + \frac{1}{L}\int\limits_{z^*}^{z^*+L}V(x,y,z) dz,
+%\end{equation}
+%with $W$ the effective potential energy defined in coordinates relative to the synchronous molecule at the center of the effective moving trap, $V$ the potential energy in real space coordinates, $L$ the length of a deceleration stage, $a$ the average acceleration experienced by the synchronous molecule, $m$ the mass of a molecule, and a longitudinal coordinate $z$ which has $z=0$ at the location where the synchronous molecule sits during a switching event.
+%
+%where $z$ points along the decelerator axis, $V$ is the lab-frame potential energy induced via the Stark effect on the molecule and applied during propagation of the synchronous molecule from position $z_0$ to $z_0+L$, and $\bar{z}$ is the non-inertial transform from the lab-frame: 
+%\begin{equation}
+%\bar{z} = z + v_0 t - \frac{1}{2}a t^2.
+%\end{equation}
+%
+%\begin{multline}
+%W(x,y,z^*) = - maz^* + 
+%\frac{1}{L'}\!\!\int\limits_{z^*}^{z^*+L'}\!\!V'(x,y,z) dz \\
+%+\frac{1}{L-L'}\!\!\int\limits_{z^*+L'}^{z^*+L}\!\!V(x,y,z) dz,\hspace{2cm}
+%\end{multline}
+%where $V'$ represents the lab-frame Stark potential induced by the alternative charge configuration, and $L'$ gives twice the distance required for the synchronous molecule to fly from its longitudinal position during a switch event, to the center of the approaching pin pair which would have been grounded under S=1 operation. This hardly changes the longitudinal behavior of the device, but adds significant transverse depth to the effective moving trap.
+%
 
 \end{document}
 %
