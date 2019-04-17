@@ -140,22 +140,22 @@ We derive the 3D effective trap in Appendix~\ref{app:effpot}, and evaluate it nu
 It is found that for \SO, the effective trap has holes. 
 Molecules moving away from the trap center along the $x$ and $y$ axes experience almost no restoring force at all. 
 This can be considered the underlying reason for the transverse-longitudinal coupling problem that has been described~\cite{VanDeMeerakker2006}. 
-Such couplings are in some contexts useful for maintaining ergodicity in a trapping geometry~\cite{Surkov1996}, but with one dimension featuring a very low energy barrier, they lead to unwanted loss.
+Such couplings are in some contexts useful for maintaining ergodicity in a trapping geometry~\cite{Surkov1996}, but with one dimension featuring a very low energy barrier, they lead to loss.
 
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{full-three-panel.png}%
 \vspace{-5pt}
 \caption{
-Characterizing the effective moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and extremely strong focusing (XSF) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b).}
+Characterizing the moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and extremely strong focusing (XSF) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b).}
 \label{fig:efftrap}
 \end{figure}
 
 Motivated by the holes evident in S=1 mode, we introduce a new figure of merit that may be used to compare the performance of various modes of operation: the minimum depth of their effective moving traps.
-Specifically, we can compare traps according to their minimum depth, by which we mean the smallest energy above which a molecule with that energy can find a way out of the trap.
+Here minimum depth refers to the smallest energy above which a molecule with that energy can find a way out of the trap.
 Having a single value to characterize effective traps allows us to do so systematically across many modes and across many magnitudes of the applied deceleration, see Fig.~\ref{fig:efftrap}a. Remarkably, SF mode offers comparable trap depth improvement to \ST, but with no sacrifice in deceleration capability. 
 The VSF and XSF modes make still more dramatic improvements, with the latter even rivaling traveling wave (TW) deceleration~\cite{Osterwalder2010}. 
 Note that for VSF and XSF, the alternate configurations are not utilized in a symmetric manner about the grounded pin pair as for SF. 
-Instead, allowing them to be used asymmetrically about the grounded pin pair opens up a new degree of freedom, which we optimize for each deceleration so as to maximize the minimum effective trap depth.
+Instead, allowing them to be used asymmetrically opens up a new degree of freedom, which we optimize so as to maximize the minimum depth.
 
 We can make further use of the effective trap by directly employing it to simulate the fate of particles confined for $3\text{ ms}$, the duration of a typical deceleration sequence (Fig.~\ref{fig:efftrap}b). 
 The results show a very close qualitative match to the trends predicted by the minimum trap depth. 
@@ -170,9 +170,9 @@ The asymptotically flat profiles at high enough speeds validate the effective tr
 
 The beginning of the low-speed breakdown depends on the intended use of the decelerator, and especially how far the molecules will be expected to travel unguided afterwards. 
 In Fig.~\ref{fig:efftrap}c, the molecules still confined within a $3\text{ mm}$ diameter circle after $5\text{ mm}$ free flight after the end of the sequence are shown. 
-This is a reasonable representation of what would be required for trap-loading, but for collisional experiments a much larger flight distance may be required.
+This is a conservative representation of what is required for trap-loading, but for collisional experiments a larger flight distance may be required.
 Note how SF and VSF cut off at even lower speeds than S=1, but XSF cuts higher. 
-This can be attributed to the fact that XSF actually features an increased transverse trap frequency relative to the others, while SF and VSF improve over S=1 mostly by plugging holes and not by increasing the trap depth or frequency.
+This can be attributed to the fact that XSF actually features an increased transverse trap frequency relative to the others, while SF and VSF improve over S=1 mostly by plugging holes and not by increasing the trap's depth or frequency.
 XSF mode may only be useful for trap loading in combination with a TW device as in~\cite{Quintero-Perez2013}.
 
 \begin{figure}[t]
