@@ -159,7 +159,7 @@ ylabel('Enhancement Ratio')
 grid on
 
 %%
-figure('PaperPosition',[0 0 8 5])
+f = figure('PaperPosition',[0 0 6 4]);
 vfs = 50:50:1200;
 sf = peaks(:,2);
 s1 = peaks(:,1);
@@ -180,6 +180,11 @@ vfs = 50:50:1250;
 vsf(end-2:end+1) = [12 9 5 0];
 
 h4 = errorbar(vfs',vsf,2*sqrt(vsf)/sqrt(100),'o:','LineWidth',2);
+hl = legend('S=1','S=3','SF','VSF');
+hl.FontSize = 13;
+hl.EdgeColor = [1 1 1];
+f.InvertHardcopy = 'off';
+f.Color = [1 1 1];
 
 set(gca,'FontSize',13)
 set(gca,'LineWidth',2)
