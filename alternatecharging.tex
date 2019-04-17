@@ -100,7 +100,7 @@ Alongside the history of achievements enabled by Stark deceleration runs a paral
 Many important steps have been made, not only in understanding the flaws of the canonical pulsed decelerator~\cite{VanDeMeerakker2006,Sawyer2008a}, but also in addressing them through the use of overtones~\cite{VanDeMeerakker2005a,Scharfenberg2009}, undertones~\cite{Zhang2016}, or even mixed phase angles~\cite{Parazzoli2009,Hou2013}. 
 Even with these advances, the outstanding inefficiencies of the pulsed decelerator, particularly with regard to transverse phase stability, have motivated alternative geometries such as interspersed quadrupole focusing~\cite{Sawyer2008a} and traveling wave deceleration~\cite{Osterwalder2010,VandenBerg2014,Fabrikant2014}. 
 Although traveling wave deceleration takes a strong step in the right direction toward truly efficient operation, it comes with costs in system complexity and high voltage engineering. 
-These costs can be partially addressed by the use of combination pulsed and traveling wave devices~\cite{Quintero-Perez2013}, or even using traveling wave geometry with pulsed electronics~\cite{Shyur2017}. 
+These costs can be partially addressed by the use of combination pulsed and traveling wave devices~\cite{Quintero-Perez2013}, or even using traveling wave geometry with pulsed electronics~\cite{Hou2016,Shyur2017}. 
 Others continue to pursue brand new geometries aiming to enhance transverse acceptance without abandoning more reliable pulsed electronics~\cite{Wang2016}. 
 Here we introduce a technique that works on a conventional system, but fully resolves transverse challenges and offers more than tenfold gains even at very low speeds.
 %In the same spirit, we introduce here a technique that uses conventional geometry and pulsed electronics, but with charge applied in an alternative manner. 
@@ -127,6 +127,7 @@ Useful alternate configurations can be created by applying voltage in a way that
 Once an imbalance exists, by charging up both pins in a pair to the same non-zero voltage, by only charging one pin in a pair, or even by unbalancing the decelerator power supplies~\cite{Hoekstra2018}, the field lines will run between pin-pairs. 
 Near the grounded pin-pair, these field lines create a focusing 2D quadrupole structure, much like this one used intentionally for trapping and controlling spin-flip losses~\cite{Reens2017}. 
 By implementing these configurations when the synchronous molecule is flying between the grounded pin pair, but retaining the use of the conventional configuration for hill climbing, the longitudinal behavior of the device is unaffected while the transverse behavior is vastly improved.
+Regarding spin-flip losses, use of these configurations is cause for concern, but so far not a significant effect~\cite{ssm}.
 Utilizing the alternate configuration of only charging a single rod gives rise to a new strongly focusing operation mode (SF), and utilizing the configuration where both pins are charged to the same voltage gives rise to a very strongly focusing mode (VSF). 
 If all four pins are charged: one pair at one voltage and the next pair at the opposite voltage, we obtain an extremely strong focusing mode (XSF).
 
@@ -147,7 +148,7 @@ Such couplings are in some contexts useful for maintaining ergodicity in a trapp
 \includegraphics[width=\linewidth]{full-three-panel.png}%
 \vspace{-5pt}
 \caption{
-Characterizing the moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and extremely strong focusing (XSF) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b).\vspace{-4mm}}
+Characterizing the moving trap under different modes of operation. In addition to the canonical S=1 and S=3 modes, newly defined strong focusing (SF), very strong focusing (VSF), and extremely strong focusing (XSF) modes are shown. Traveling wave (TW) deceleration is also compared, assuming $10$ kV peak to peak, to our knowledge the largest voltage used to successfully decelerate to rest with a TW device. In panel (a) the trap depth at the lowest point of escape is shown as a function of deceleration for different operating modes. In panel~(b) the initial phase space volume remaining within these effective traps after a $3$~ms hold time is shown, and in panel (c) a full decelerator simulation is performed as a function of final velocities, with hold time fixed also at $3$~ms and deceleration fixed as indicated by the gray dashed lines in panel~(b). For TW a full simulation is not performed, since low speed losses are less significant.\vspace{-4mm}}
 \label{fig:efftrap}
 \end{figure}
 
@@ -195,7 +196,7 @@ XSF mode may only be useful for trap loading in combination with a TW device as 
 \caption{\label{fig:alldata}
 Experimental data are collected with a $333$ stage decelerator and a beam of OH radicals expanded in Neon at an initial speed of $820\text{ m/s}$. 
 Large gains persist even down to final speeds appropriate for trap loading, with VSF outperforming S=1 at $50\text{ m/s}$ elevenfold.
-Larger accelerations than decelerations are possible in the device, demonstrating the increased range of VSF mode. 
+Larger accelerations than decelerations are possible in the device, demonstrating the increased range of VSF mode.\vspace{-4mm}
 }
 \end{figure}
 
@@ -224,8 +225,8 @@ Hold times vary from $2-4\text{ ms}$ as final speed is tuned, and thus are in ag
 \caption{\label{fig:phasespace}
 Longitudinal Phase Space Fillings are shown for several operation modes as labeled. 
 All modes are initialized with the same uniformly distributed phase space.
-Note dramatic improvements in homogeneity and planar density, without significant broadening to larger velocity classes. 
-Molecules travel 333 stages, begin at 900 m/s, and slow at 200 km/s/s.
+Note dramatic improvements in homogeneity and planar density, without significant broadening to larger velocity classes except for XSF. 
+Molecules travel $333$ stages, begin at 900 m/s, and slow at 200 km/s/s (67 km/s/s for S=3).
 }
 \end{figure*}
 
@@ -237,10 +238,10 @@ Rather, these are increases in phase space volume which manifest as increases in
 
 All modes are initialized with the same homogeneous phase space density, which is valid for an initial beam source with a characteristic temperature larger than that of the effective moving trap.
 In the longitudinal direction, most supersonic expansions satisfy this, with the exception of those performed with Helium buffer gas, which can reach temperatures as low as $40\text{ mK}$ expanding from room temperature~\cite{Even2014}.
-For this work, our OH expands in Neon and reaches a $300\text{ mK}$ longitudinal temperature~\cite{Wu2018}.
+For this work, OH expands in Neon and reaches a $300\text{ mK}$ longitudinal temperature~\cite{Wu2018}.
 In the transverse direction, source temperature is a more subtle phenomenon, and may be bimodal~\cite{Beijerinck1981}.
-Furthermore, beam skimming and the resulting interference it can cause often require increased distance between the source and the decelerator, resulting in poor phase space matching and a transversely under-filled effective trap.
-To fully leverage the transverse phase space attainable with XSF mode will likely require skimmer cooling~\cite{Wu2018}.
+Furthermore, beam skimming and the resulting interference it causes often require increased distance between the source and the decelerator, resulting in poor phase space matching and a transversely under-filled effective trap.
+It follows that fully leveraging the transverse phase space attainable with XSF mode will likely require skimmer cooling~\cite{Wu2018}.
 
 %We also study the behavior of molecules in their effective moving traps at long times, see Fig.~\ref{fig:longtimes}.
 %This allows us to distinguish several effects. 
@@ -274,7 +275,7 @@ To fully leverage the transverse phase space attainable with XSF mode will likel
 %Finally, we add that it may even be that a brand new electrode configuration is more well-suited for capitalizing on the gains afforded by the use of alternate charge configurations. The obvious direction would be to keep the pulsed design but somehow curve or change the pin arrangement so that the alternate configurations would feature even better focusing, without too dramatically reducing the magnitude of the large electric field that can be applied within a single stage in the usual configuration.
 
 %\section{Conclusion}
-Several new operation modes for the conventional pulsed decelerator have been introduced, which make use of alternate charge configurations and yield significant improvements in transverse focusing and overall phase space performance.
+Several new operation modes for the conventional pulsed decelerator have been introduced, which make use of alternate charge configurations and yield significant improvements in transverse focusing and overall performance.
 These modes do not simply increase the temperature of molecules which may be decelerated.
 Instead, by plugging holes in the transverse direction of the effective moving trap, these operating modes retain greater numbers of molecules at the same temperatures as before.
 This discovery opens up brand new possibilities for applying Stark deceleration to much faster beams or to molecules with less favorable Stark shift to mass ratios, since decelerator lengths and runtimes may now be extended without suffering from transverse trap leakage.
