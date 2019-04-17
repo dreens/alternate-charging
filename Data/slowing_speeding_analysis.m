@@ -189,8 +189,9 @@ f.Color = [1 1 1];
 set(gca,'FontSize',13)
 set(gca,'LineWidth',2)
 set(gca,'TickLength',[.01 .03])
+set(gca,'Position',[.09 .135 .9 .845])
 %set(gca,'YScale','log')
-
+xlim([0 1300])
 name = 'Data-Figure-Final-Speed';
 print(gcf,name,'-dpng','-r300')
 system(['open ' name '.png'])
