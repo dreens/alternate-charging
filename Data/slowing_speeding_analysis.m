@@ -171,7 +171,7 @@ h2 = errorbar(vfs3',s3,sqrt(s3)/sqrt(100),'o:','LineWidth',2);
 h3 = errorbar(vfs',sf,sqrt(sf)/sqrt(100),'o:','LineWidth',2);
 %title('S=1, SF various Final Speeds')
 xlabel('Final Speed (m/s)')
-ylabel('Peak Time of Flight')
+ylabel('Population (arb)')
 %grid on
 
 % Going to run with the separate traces and add mock data for VSF for now.
@@ -180,7 +180,7 @@ vfs = 50:50:1250;
 vsf(end-2:end+1) = [12 9 5 0];
 
 h4 = errorbar(vfs',vsf,2*sqrt(vsf)/sqrt(100),'o:','LineWidth',2);
-hl = legend('S=1','S=3','SF','VSF');
+hl = legend('S=1','S=3','F','SF');
 hl.FontSize = 13;
 hl.EdgeColor = [1 1 1];
 f.InvertHardcopy = 'off';
@@ -195,4 +195,5 @@ xlim([0 1300])
 name = 'Data-Figure-Final-Speed';
 print(gcf,name,'-dpng','-r300')
 system(['open ' name '.png'])
+
 
