@@ -122,14 +122,15 @@ Large gains persist at low speeds, with F, an operating mode employing the new s
 \end{figure}
 
 
-The strategy is to admix new field distributions into the deceleration process that feature strong restoring force in the transverse directions.
-%Field distributions with this property include those arising from applying voltage $V$ to only one of the four distribution rods in a Stark decelerator, from applying the same voltage $V$ to both pins in a pair rather than opposite polarities, 
-Depending on which field distributions are admixed, we specify several operating modes employing this strategy: focusing (F), strong focusing (SF), and very strong focusing (VSF).
-In the conventional strategy, only two field distributions are used, and one is identical to the other up to translation.
-Operation modes employing the conventional strategy (S\,=\,1, S\,=\,3) vary only in the timing of switches between these distributions.
-The measured performance of modes employing both strategies is shown in Fig.~\ref{fig:alldata} for hydroxyl radicals, a benchmark species for Stark deceleration.
-These are performed on a decelerator not previously reported, with $2$~mm pin spacing and other geometric parameters as in our earlier devices~\cite{Bochinski2004,Sawyer2007}, but with more than double the length, $333$ stages, so as to decelerate a beam seeded in neon to rest.
-F mode, which requires no wiring changes and may be immediately employed on existing devices, enhances performance by a factor of $4-8$ depending on final speed, see Fig.~\ref{fig:alldata}.
+The strategy is to admix new field distributions into the deceleration process that feature strong restoring forces in the transverse directions.
+Depending on which field distributions are chosen, we specify two operating modes employing this strategy: focusing (F) and strong focusing (SF).
+In the conventional strategy, only two field distributions are used, and one is identical to the other up to translation and rotation.
+These field distributions require an electrode array with the capability to apply three distinct equally spaced voltages, usually labeled ground, plus, and minus.
+Both F and SF use distributions which may be generated simply by rearranging how the usual three voltages are applied to the decelerator electrodes.
+Although F mode is weaker, it has the unique advantage of requiring no hardware modification to implement with an existing conventional decelerator, since the additional distributions may be obtained from those used conventionally by grounding electrodes that formerly would have been charged.
+SF mode significantly outperforms F mode in simulation, but requires all three voltages to be applied to a single electrode at different times during operation.
+This is something the conventional mode avoids, and is challenging to implement.
+
 \begin{figure*}[t!]
 \includegraphics[width=\linewidth]{Configurations/pinpairformal6.png}%
 \caption{
@@ -145,32 +146,34 @@ Distribution A seems field free between grounded pins, but in the plane orthogon
 }
 \label{fig:chargecartoon}
 \end{figure*}
-Modes SF and VSF are not implemented in this work, but could be achieved with a new high voltage system for additional significant enhancement factors according to our simulations, see Fig.~\ref{fig:efftrap}.
+%Modes SF and VSF are not implemented in this work, but could be achieved with a new high voltage system for additional significant enhancement factors according to our simulations, see Fig.~\ref{fig:efftrap}.
 %With some investment in high voltage equipment, it may be possible to implement SF mode, providing an additional significant gain even at trappable speeds. %which requires a tri-state switch capable of double the usual switching frequency~\footnote{Behlke HTS-301-151-SiC, options HFB, ILC, ALL-OFF-BIPOLAR.}, so as to make use of the field distribution arising from charging both pins in a pair to the same nenzero voltage.
 %A comparable investment would enable VSF mode, but we do not pursue this since it is less useful for trapping, our primary emphasis, for reasons discussed below.
 %The slowest speeds shown are suitable for trap loading~\cite{Sawyer2008}.
 %Hold times vary from $2-4\text{ ms}$ as final speed is tuned, and thus are in agreement with the simulation results reported for $3\text{ ms}$ in Fig.~\ref{fig:efftrap}.
 
-To understand the success of this new strategy, we revisit the operating principle of a decelerator; Fig.~\ref{fig:chargecartoon} details field distributions and the operating modes derived from them.
-In the conventional strategy~\cite{VanDeMeerakker2012}, molecules approach a charged pin pair, climbing a hill in potential energy (Fig.~\ref{fig:chargecartoon}, left column). 
-The hill is abruptly switched off, allowing molecules to then repeat the process without regaining that potential energy.
-The abrupt switch occurs partway up the potential energy hill, so that molecules that are ahead get more energy removed, and vice versa. 
-This creates a longitudinal restoring force for the molecules, with respect to the center of a decelerating reference frame.
-It is customary to imagine an idealized ``synchronous molecule'' sitting in the center of this frame.
-%This creates a traveling potential well for the molecules, with a longitudinal restoring force towards the center of a decelerating reference frame whose deceleration is set by the chirp rate of the switching frequency.
-%It is customary to define an idealized ``synchronous molecule'' with zero energy with respect to this potential well, which proceeds exactly down the central axis of the decelerator and climbs each potential hill to the same position at the moment of a switching event.
-In the transverse directions, restoring force is not inherited from switching events, but arises directly from the focusing properties of field distributions in the lab frame.
-Together, the longitudinal and transverse restoring force generate a traveling potential well for the molecules, which translates along the device and decelerates according to a programmed ramp of the switching frequency.
+To understand the success of this new strategy, we revisit the operation of a decelerator; Fig.~\ref{fig:chargecartoon} details field distributions and the operating modes derived from them.
+In the conventional S\,=\,1 strategy~\cite{VanDeMeerakker2012}, low-field seeking molecules approach a charged pin pair. 
+This process is analogous to climbing a hill, as the molecules polarize and exchange kinetic energy for internal potential energy (Fig.~\ref{fig:chargecartoon}, right column).
+This strong field is abruptly removed by high voltage switches, before the molecules have a chance to accelerate down the hill.
+It is customary to discuss the behavior of an idealized ``synchronous molecule'' which travels along the decelerator axis with zero transverse velocity.
+The switching is timed so that the synchronous molecule loses an identical amount of energy at each pin pair.
+It is essential that the synchronous molecule travel only partway up each hill, so that molecules that are ahead of the synchronous molecule get more energy removed.
+This creates a longitudinal restoring force for the molecules, centered on the synchronous molecule.
+Transversely, restoring force is not inherited from switching events, but arises directly from the focusing properties of field distributions.
+Together, the longitudinal and transverse restoring forces generate a traveling potential well for the molecules, which translates along the device and decelerates according to a ramp of the switching frequency.
 
-Conventionally, pins are always charged in bipolar pairs, in which case transverse focusing occurs right between the charged pin pair, but not significantly elsewhere (Fig.~\ref{fig:chargecartoon}A).
-This causes molecules to experience much better transverse focusing when they are regularly sampling the focusing fields right between the charged pin-pair, which requires them to be oscillating regularly ahead and behind the synchronous molecule.
-Just after the switching event, which as mentioned must happen only partway up the potential energy hill, molecules proceed through the largely field-free region between grounded pin pairs.
-This region is of central importance to our new deceleration strategy.
+Conventionally, pins are always charged in bipolar pairs, in which case transverse focusing occurs between the charged pin pair, but not significantly elsewhere (Fig.~\ref{fig:chargecartoon}b-A).
+Molecules do not regularly access this region, since these pins must be grounded before the synchronous molecule reaches them to generate a longitudinal restoring force.
+Instead, the molecules then pass between grounded pins, where the transverse field is actually slightly defocusing~\footnote{This is not highly apparent in Fig.~\ref{fig:chargecartoon}b-A, where a $45^\circ$ slicing plane is chosen for visual clarity, since this plane intersects all pin pairs.}.
+Because of this, molecules experience a small transverse confinement on average, compared to what is possible with the field strengths typical of the decelerator. 
+Their transverse confinement also varies with how strongly the molecules are decelerated, and with how far ahead of the synchronous molecule they regularly oscillate, which gives rise to the situation that molecules which are coldest longitudinally are less well confined transversely.
+The use of deceleration overtones (S\,=\,3, 5, ... ) \cite{VanDeMeerakker2005a} resolves this by allowing molecules to fully transit between charged pin pairs. 
+This leverages the full focusing properties of the conventional field distribution, at the expense of only using 1/3 of the pin pairs for removing energy. 
+Instead, we introduce new field distributions with strong transverse restoring forces when the synchronous molecule is flying between the grounded pin pair, but retain the use of the conventional distribution otherwise.
 Useful field distributions with transverse focusing in this region can be created by applying voltage in a way that is not balanced between adjacent pin pairs. 
-This imbalance causes field lines to run toward the grounded pin pair, creating a focusing 2D quadrupole structure, much like this one used intentionally for trapping and controlling spin-flip losses~\cite{Reens2017}.
-Imbalanced distributions include those arising from charging only a single rod (Fig.~\ref{fig:chargecartoon}DE), from charging a pin pair to the same voltage (Fig.~\ref{fig:chargecartoon}B), or from charging the other pin pair oppositely (Fig.~\ref{fig:chargecartoon}C).
-These correspond to modes F, SF, and VSF respectively.
-By implementing these distributions when the synchronous molecule is flying between the grounded pin pair, but retaining the use of the conventional distribution otherwise (Fig.~\ref{fig:chargecartoon}, upper--lower alignment), the longitudinal behavior of the device is preserved while the transverse behavior is vastly improved.
+This imbalance causes field lines to run toward the grounded pin pair, creating a focusing 2D quadrupole structure.
+Imbalanced distributions include those arising from charging only a single rod (Fig.~\ref{fig:chargecartoon}b-DE, F), or from charging a pin pair to the same voltage (Fig.~\ref{fig:chargecartoon}b-B, SF).
 %Refer to the on-axis energy diagrams in the lower half of Fig.~\ref{fig:chargecartoon}, and their alignment with the field distributions shown above them.
 
 \begin{figure*}[ht!]
