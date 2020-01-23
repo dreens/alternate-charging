@@ -117,6 +117,7 @@ This is something the conventional mode avoids, and is challenging to implement.
 
 \begin{figure*}[t!]
 \includegraphics[width=\linewidth]{Configurations/pinpairformal5.png}%
+\vspace{-2mm}
 \caption{
 A new strategy for Stark deceleration, consisting of electric field distributions with transverse focusing (above) and operation modes which employ them (below). 
 Distributions are generated in COMSOL with $0$, $+12.5$, or $-12.5$ kV applied to the pins as indicated; the chosen cut plane includes the decelerator axis and is $45^\circ$ to all pins to ensure their visibility.
@@ -163,20 +164,10 @@ Useful field distributions with transverse focusing in this region can be create
 This causes field lines to run toward the grounded pin pair, creating a focusing 2D quadrupole structure.
 Possibilities include charging only a single pin (Fig.~\ref{fig:chargecartoon}BC, F), or charging both to the same voltage (Fig.~\ref{fig:chargecartoon}D, SF).
 
-\begin{figure}[h]
-\includegraphics[width=.8\linewidth]{Figure2.png}%
+\begin{figure*}[t]
+\includegraphics[width=\linewidth]{Figure2.png}%
+\vspace{-2mm}
 \caption{
-%Results from simulation of deceleration modes
-%Conventional S\,=\,1 and S\,=\,3 modes, together with F, SF, and VSF employing the new strategy. 
-%Traveling wave (TW) deceleration is also compared, assuming a $10$~kV peak to peak waveform. 
-%(a) Initial phase space volume remaining within the traveling well after $3$~ms, only the effective traveling well is simulated.
-%(b) Equipotentials of the traveling well for $200$~km/s/s deceleration, or $67$~km/s/s for S\,=\,3 since this mode requires a device three times longer.
-%Lack of closure of an equipotential equates to possibility of escape. 
-%(c) Phase Space Fillings, both longitudinal (top) and transverse (bottom), for the labeled operation modes. 
-%With the same uniformly distributed initial phase space, the surviving number of molecules is $3$, $17$, $11$, $24$, and $75$ thousand respectively.
-%Note dramatic improvements in homogeneity and flux, without significant broadening to larger velocity classes except for VSF. 
-%Molecules travel $333$~stages, begin at $900$~m/s, and slow at $200$~km/s/s ($67$~km/s/s for S\,=\,3), large decelerations useful for trap loading.
-%For TW a full simulation is not performed.
 Simulation results of different deceleration modes. 
 (a) Simulated phase space volume captured by different modes of operation, for varying decelerations and elapsed time fixed at $3$~ms. 
 A $10$~kV peak to peak traveling wave (TW) deceleration and $\pm 12.5$~kV S\,=\,3 are also plotted for comparison. 
@@ -186,10 +177,10 @@ Lack of closure of an equipotential indicates the possibility of molecule escape
 (c) Phase Space Fillings, both longitudinal (top) and transverse (bottom), for the labeled operation modes.
 Molecules travel for $3~\text{ms}$ with a deceleration of $200 \text{ km/s}^2$. 
 The surviving number of molecules is $3$, $11$ and $24$ thousand respectively. 
-Note dramatic improvements in homogeneity and flux, without signicant broadening to larger velocity classes.
+Note dramatic improvements in homogeneity and flux, without significant broadening to larger velocity classes.
 \vspace{-4mm}}
 \label{fig:efftrap}
-\end{figure}
+\end{figure*}
 %\section{The Effective Moving Trap}
 
 %In order to quantitatively analyze these operation modes, we directly calculate the traveling trap each sequence generates for the molecules.
@@ -211,122 +202,75 @@ Molecules may also be lost longitudinally, often remaining transversely focused 
 For S\,=\,1 mode, the $10$~mK equipotential is transversely broad and even contains four small openings.
 This corresponds to the lack of significant transverse focusing in S\,=\,1 for molecules close to the synchronous molecule longitudinally, which relates to the transverse-longitudinal coupling problem that has been described~\cite{VanDeMeerakker2006}.
 In general, such couplings are often useful for maintaining ergodicity in a trap~\cite{Surkov1996}, but with some directions featuring very low energy openings, even small amounts of motional coupling lead to loss.
-%These loss regions actually reduce in size with stronger deceleration for S\,=\,1, as expected given the increased sampling of the transversely focusing region when molecules climb further towards the charged pin pair.
 The improvements in operation efficiency for F and SF modes correspond to improved roundedness and tightness as evident in all equipotentials shown.
+At speeds below $50\text{ m/s}$, the performance of F and SF degrades just as for S\,=\,1 due to the breakdown of the traveling trap approximation and the discontinuous nature of pulsed deceleration.
 
+In Fig.~\ref{fig:efftrap}c, the longitudinal and transverse phase space fillings are compared for all modes, with $200\text{ km/s}^2$ deceleration and $3$~ms travel time as before. 
+All modes are initialized with the same homogeneous phase space density (PSD).
+This is valid when the initial beam source generates a much broader distribution than the volume accepted by the traveling trap.
+In the longitudinal direction, most supersonic expansions satisfy this, with the exception of those performed with a Helium buffer gas, which can reach temperatures as low as $40\text{ mK}$ expanding from room temperature~\cite{Even2014}.
+For this work, OH expands in neon and reaches a $300\text{ mK}$ longitudinal temperature~\cite{Wu2018}, equivalent to a velocity spread of $\pm17$~m/s.
+In the transverse direction, source temperature is a more subtle phenomenon, and may be bimodal~\cite{Beijerinck1981}.
+As can be seen, the distribution is nearly homogeneous after deceleration for all modes except S\,=\,1.
+Apparent increases in point density between panels arise from increases in the phase space volume that is projected onto the plane.
+Nevertheless, these improvements can prevent reductions in PSD which stem from under filling of the phase space volume that a trap or process can utilize.
+For example, a trap with an acceptance comparable to the outer dimensions of the S\,=\,1 mode will be underfilled by the S\,=\,1 mode due to the prominent missing ring, while F mode will not do this, effectively quadrupling the phase space density loaded in the trap.
+Most realistic traps possess comparable transverse and longitudinal phase space acceptances due to ergodicity, cross-dimensional couplings, or cross-dimensionally thermalizing collisions if nothing else.
+This makes SF mode appealing, since it delivers a phase space volume with comparable extents in both directions.
 
-%For the S\,=\,1 mode, $E_\text{esc}$ is nearly zero, particularly for molecules which move away from the trap center towards the four small escape holes barely visible in the $10$~mK S\,=\,1 equipotential of Fig.~\ref{fig:efftrap}b. 
-%This is the underlying reason for the transverse-longitudinal coupling problem that has been described~\cite{VanDeMeerakker2006}.
-%In general, such couplings are often useful for maintaining ergodicity in a trap~\cite{Surkov1996}, but with some directions featuring very low escape energy, even small amounts of motional coupling lead to loss.
-%$E_\text{esc}$ actually improves with stronger deceleration for S\,=\,1, as expected given the increased sampling of the transversely focusing region when molecules climb further towards the charged pin pair, see Fig.~\ref{fig:chargecartoon}A.
-%Remarkably, F mode offers comparable $E_\text{esc}$ to S\,=\,3, but with no sacrifice in deceleration capability.
-%The SF and VSF modes make more dramatic improvements, with the latter rivaling traveling wave (TW) deceleration~\cite{Osterwalder2010}. 
-%In Fig.~\ref{fig:efftrap}, $10$~kV peak to peak sine waves are assumed, to our knowledge the largest used to decelerate all the way to rest~\cite{Quintero-Perez2013}.
-%Additionally, all modes besides TW use the rather small $2$x$2\text{ mm}^2$ open area of our device, while TW devices use rings of $4$~mm inner diameter.
-%If VSF mode were used with a $3$x$3\text{ mm}^2$ device~\cite{Scharfenberg2009} or a $4$x$4\text{ mm}^2$~\cite{VandeMeerakker2005}, phase space volume would increase significantly, depending approximately on the cube of pin-pair spacing. 
-
-The domain of validity of the use of traveling wells to characterize deceleration is a key concern.
-More commonly the traveling well approach is reserved for continuous deceleration schemes~\cite{Osterwalder2010,Narevicius2008}.
-Essentially it is required that the longitudinal velocity $v_z$ of the molecules satisfy $v_z/D \gg f$, $D$ the stage distance and $f$ the oscillation frequency in the traveling well.
-The precise dynamics as one approaches this bound are relevant, especially for trapping experiments, which necessarily violate this condition as $v_z\rightarrow 0$.
-These dynamics may be precisely isolated by comparing the simulation of molecules in the traveling well (Fig.~\ref{fig:efftrap}c) to full Monte-Carlo simulations.
-By varying only the final speed, and keeping deceleration and run-time exactly fixed by appropriately varying initial speed and decelerator length, we obtain the results shown in Fig.~\ref{fig:efftrap}d.
-The asymptotically flat profiles at high enough speeds validate the traveling well approach, as do the quantitative agreement between the asymptotic values and the corresponding points at $200\text{ km/s/s}$ and $67\text{ km/s/s}$ in Fig.~\ref{fig:efftrap}c.
-
-The beginning of the low-speed breakdown depends on the intended use of the decelerator, and especially how far the molecules will be expected to travel unguided afterwards.
-In Fig.~\ref{fig:efftrap}c, the molecules still confined within a $3\text{ mm}$ diameter circle transversely after $5\text{ mm}$ free flight from the end of the sequence are shown. 
-This is a conservative representation of what is required for trap-loading, but for collisional experiments a larger flight distance may be required.
-Note how F and SF cut off at even lower speeds than S\,=\,1, but VSF cuts higher. 
-This can be attributed to the fact that VSF actually features an increased transverse trap frequency relative to the others, while F and SF improve over S\,=\,1 mostly by mitigation of escape minima, and not by increasing the transverse confinement strength of the well.
-VSF mode may be especially useful for trap loading in combination with a TW device as in~\cite{Quintero-Perez2013}.
-
-%\section{Further Simulation Results}
 \begin{figure}[t]
-\includegraphics[width=\linewidth]{5x2-PSD-Compare.png}
+\includegraphics[width=\linewidth]{Figure3.png}%
+\vspace{-5pt}
+\caption{\label{fig:alldata}
+The molecular signal and enhancement between F mode and conventional S=1 deceleration over a range of final speeds. 
+Data are collected with a 333 stage decelerator with $25 \text{ kV}$ between pins and a beam of OH radicals expanded in Neon at an initial speed of $825 \text{ m/s}$. 
+Large gains persist at low speeds, with F outperforming S\,=\,1 at $25 \text{ m/s}$ by a factor of $7$. 
+The inset shows the time of flight signal from the valve pulse for F (orange) and S\,=\,1(blue) modes measured at the end of the decelerator when slowing to $50 \text{ m/s}$, demonstrating a potential factor of $4$ improvement at trappable final speeds. 
+\vspace{-4mm}}
+\end{figure}
+
+The measured enhancement of F over S\,=\,1 is shown in Fig.~\ref{fig:alldata} for hydroxyl radicals, a benchmark species for Stark deceleration.
+This is performed on a decelerator not previously reported, with $2$~mm pin spacing and other geometric parameters as in our earlier devices~\cite{Bochinski2004,Sawyer2007}, but with more than double the length, $333$ stages, so as to decelerate a beam seeded in neon with an initial speed of $825\text{ m/s}$ to rest.
+F mode, which may be immediately implemented on existing devices, enhances performance by at least a factor of $4$, with an order of magnitude improvement at certain final speeds, see Fig.~\ref{fig:alldata}. Notably, F mode significantly improves operation at very low speeds ($<25\text{ m/s}$), where S\,=\,1 inefficiencies become readily apparent \cite{Sawyer2008}. 
+SF mode is not implemented in this work, but could be achieved with a new high voltage system for additional significant enhancement factors according to our simulations, see Fig.~\ref{fig:efftrap}.
+\begin{figure}[t]
+\includegraphics[width=\linewidth]{Figure4.png}
 \vspace{-15pt}
-\caption{\label{fig:phasespace}
-Phase Space Fillings, both longitudinal (above) and transverse (below), for the labeled operation modes. 
-With the same uniformly distributed initial phase space, the surviving number of molecules is $3$, $17$, $11$, $24$, and $75$ thousand respectively.
-Note dramatic improvements in homogeneity and flux, without significant broadening to larger velocity classes except for VSF. 
-Molecules travel $333$~stages, begin at $900$~m/s, and slow at $200$~km/s/s ($67$~km/s/s for S\,=\,3), large decelerations useful for trap loading.
+\caption{\label{fig:voltage}
+Comparisons of decelerated populations between F mode and S\,=\,1 mode at different applied voltages with a final velocity $50 \text{ m/s}$. 
+The dot/square represent experimental results, which agree with the solid lines calculated from Monte Carlo simulation. 
+Instead of showing saturation behavior as S\,=\,1, the decelerated population using F mode increases with higher applied voltage.
 \vspace{-15pt}}
 \end{figure}
 
-In Fig.~\ref{fig:phasespace}, the longitudinal and transverse phase space fillings are compared for all modes, with $200\text{ km/s/s}$ deceleration through our $333$ stage device, and final speeds of about $200\text{ m/s}$ to avoid low speed cutoff behavior. 
-All modes are initialized with the same homogeneous phase space density (PSD).
-As can be seen, the distribution is nearly homogeneous after deceleration for all modes except S\,=\,1.
-Increases in point density between panels do not arise from actual PSD increases, but from increases in the phase space volume that is projected onto the plane.
-Nevertheless, these improvements can prevent reductions in PSD which stem from under filling of the phase space volume that a trap can accept.
-For example, a hypothetical trap with an acceptance comparable to the outer dimensions of S\,=\,1 mode will be under filled by S\,=\,1 deceleration due to the missing regions, while F mode will not do this, effectively quadrupling the phase space density loaded in the trap.
-Most realistic traps possess comparable transverse and longitudinal phase space acceptances due to ergodicity, cross-dimensional couplings, or cross-dimensionally thermalizing collisions if nothing else.
-In SF mode, transverse phase space acceptance is increased significantly over F mode, becoming comparable to the longitudinal, and avoiding transversely under filling realistic traps by an additional factor of two.
+An insightful way to experimentally understand this approach to transverse focusing is to operate using different confining potentials.
+Since our demonstration species the hydroxyl radical has a linear ground state Stark shift in our standard operating field strengths, adjusting the voltage effectively linearly scale the potential experienced by the sample. 
+Fig. \ref{fig:voltage} shows the final population of molecules slowed using S\,=\,1 and F modes to $50 \text{ m/s}$, a typical trapping speed, under different decelerator voltages.
+Again, an equal amount of energy is removed from the synchronous molecule at each pin pair.
+At low voltages, the field between the pins is not sufficient to remove the energy required to slow to the desired speed.
+Past some point the field strength is sufficient to remove enough energy per stage such that the final speed can be achieved.
+Yet at higher voltages, molecules slowed in the S\,=\,1 scheme do not need to approach the pins as closely, reducing the sampling of the inter-pin focusing field.
+Increased field gradients compete with a shorter focusing field sampling time.
+This behavior manifests as a saturation or even a reduction in the surviving molecule number, further discussed in \cite{Sawyer2008}.
+Since the F mode separates transverse focusing from slowing, molecules experience greater transverse focusing at higher field strengths.
+Additionally, higher fields means that molecules need a shorter period of slowing and can spend a greater amount of time in the focussing field configuration.
+Thus at all but the lowest field strengths (where S\,=\,1 is effectively equivalent to F mode) F mode slowing far outperforms the conventional deceleration strategy.
+While in this result we were limited to $13 \text{ kV}$ by the safety margins of our device, one may be able to see considerable efficiency gains and greater phase space acceptances at even higher voltages using these advanced modes.
 
-%When comparing S\,=\,1 to F, phase space density is increased in a global sense, since the overall shape of the phase space acceptances are similar but quadruple the molecules are present in F.
-%Locally however, phase space density is not increased; in the close vicinity of any point included on these plots, a suitably small phase space volume may be found within which phase space density is equal to the initial phase space density, in keeping with the Louisville theorem.
-%The reason that phase space may be conserved locally but not globally is that the accepted region in S\,=\,1 mode, whose traveling well features low escape energies, becomes hopelessly swirled about, so that any reasonably shaped global volume will contain accepted regions of fixed phase space density and rejected regions of zero phase space density.
-
-The homogeneous initial phase space density used in Fig.~\ref{fig:phasespace} is valid when the initial beam source generates a much broader distribution in phase space than the volume accepted by the traveling trap.
-In the longitudinal direction, most supersonic expansions satisfy this, with the exception of those performed with Helium buffer gas, which can reach temperatures as low as $40\text{ mK}$ expanding from room temperature~\cite{Even2014}.
-For this work, OH expands in neon and reaches a $300\text{ mK}$ longitudinal temperature~\cite{Wu2018}, equivalent to a velocity spread of $\pm17$~m/s.
-In the transverse direction, source temperature is a more subtle phenomenon, and may be bimodal~\cite{Beijerinck1981}.
-Furthermore, beam skimming and the resulting interference it causes often require increased distance between the source and the decelerator, resulting in a transversely under-filled traveling well.
+In addition to the two new operation modes identified here, a whole class of deceleration modes based upon the same strategy exists. 
+Of significant interest is an enhanced transverse confinement mode we call very strong focusing(VSF). 
+By charging the pin pairs in a $+,-$ configuration instead of $+$,ground, as in SF, this mode effectively doubles the 2D quadrupole trap gradient, significantly enhancing transverse confinement.
+This technique utilizes two bipolar switches between ground and $\pm 12 \text{ kV}$ and two three state switches operating between all three voltage levels.
+There are other ways to achieve a similar result using different hardware configurations.
+Furthermore, beam skimming and the resulting interference it causes often requires increased distance between the source and the decelerator, resulting in a transversely under-filled traveling well.
 Skimmer cooling addresses this~\cite{Wu2018}, and is therefore well suited for VSF mode.
 
-Finally, we note that the enhanced applicability of deceleration to less responsive molecules.
-D$_2$O molecules in the $|1,1\rangle$ state~\cite{Motsch2009} are brought into the viable range in VSF mode, note the point at $25$~km/s/s in Fig.~\ref{fig:efftrap}c.
-This is discussed further here~\cite{ssm}.
-
-%It is observed that SF and VSF mode feature a very close match between their longitudinal and transverse phase space acceptances.
-%This is a consequence of the tuning of an extra parameter afforded by the new deceleration modes- the relative time devoted to the original field distributions (Fig.~\ref{fig:chargecartoon}, A, A') and those with increased transverse focusing (Fig.~\ref{fig:chargecartoon}, B--E).
-%In all mode diagrams shown in Fig.~\ref{fig:chargecartoon}, new field distributions are applied over a spatial region that is exactly centered around the grounded pin pair.
-%But if this restriction is lifted, a new tuning parameter arises, a second phase angle $\phi_2$ of sorts.
-%In Fig.~\ref{fig:efftrap}, $\phi_2$ is tuned for SF and VSF so as to maximize the escape energy for each deceleration.
-%These tuned versions are labeled as SF$^*$ and VSF$^*$, and the optimum $\phi_2$ are listed in~\cite{ssm}.
-%This escape energy is usually maximized when the transverse and longitudinal depths are made comparable, since otherwise one direction is limiting, hence the similar shape of the transverse and longitudinal distributions.
-%Tuning $\phi_2$ for maximum escape energy tends to optimize flux as well, but one could instead tune for a desired ratio of longitudinal to transverse spread as required for optimal collisional studies or phase space matching to a trap.
-
-
-
-%We also study the behavior of molecules in their effective moving traps at long times, see Fig.~\ref{fig:longtimes}.
-%This allows us to distinguish several effects. 
-%The very long-time asymptotic trapped number is a direct reflection of the effective moving trap depth.
-%The time-scale for approach to this asymptotic number is a measure of the ergodicity of the effective trap.
-%It is seen that in S=1 mode nearly all are lost eventually, as expected.
-%It is also seen that while traveling wave geometries sport increased trap-depths, their asymmetry and increased ergodicity relative to VSF mode makes the latter preferable for a wide range of run-times useful in typical experiments.
-
-
-%\section{Discussion}
-%It is important to reconcile our language thus far with the notion of the phase space conservative behavior of non-dissipative Hamiltonian systems such as Stark decelerators. While it is true in theory that such systems cannot compress or dilute phase space; in practice the conserved volume can become hopelessly swirled about, so that any reasonable scientific device, which typically accepts an approximately ellipsoidal phase space volume, inevitably includes a mixture of conserved and non-conserved volumes, so that the final phase space density can be severely diluted. Simply put, a trap with a hole in it is certainly a non-dissipative Hamiltonian system, but that doesn't prevent molecules falling out.
-
-%\section{Non-Adiabatic Transitions}
-%Non-adiabatic transitions are important in the context of these alternate deceleration modes, because the charge configurations used for boosting transverse confinement feature quadrupolar field arrangements with electric field minima and rapid field rotation close to those minima.
-%This situation makes possible transitions that preserve parity but change the $m$ quantum number describing the alignment of the molecule with the field.
-%Molecular states chosen for Stark deceleration typically feature total $J>1/2$, in which case there exist states with less than maximal $|m|$ to which transitions can occur resulting in dramatically reduced strength of Stark forces applied by the decelerator.
-%For the case of OH Molecules, $J=3/2$, and estimations of the magnitude of spin-flip transitions suggest that it could be as large as a $50\%$ effect in our device. 
-%However, in practice, deviations from the ideal geometry tend to greatly reduce the risk of spin-flip transitions, because for example slight nonzero angles between pins, or length differences, tend to cause the unintentional removal of electric field minima.
-%In our device, we find no detectable influence of spin-flip losses, based on good agreement between data and Monte Carlo without including their effect.
-%This could be ensured by intentionally unbalancing the lengths of pin-pairs, so that one pair has rods that are a few millimeters longer than the other. A $3$~mm imbalance would be sufficient to pull the electric field zero completely out of the flight path of the molecules. 
-
-%\section{Extensions}
-%Besides XSF mode, mentioned above, several other direct extensions of our results are worth mentioning. Firstly, at low phase angles, we note that it is in general not worth the effort to mix in configurations $A$ and $A'$ of Fig.~\ref{fig:chargecartoon}, and good results can be achieved with only ever having a single rod charged at a time as in SF Mode. In the case of VSF mode, one can quite efficiently run a decelerator at low phase angles with only a single HV switch, by switching between configuration $D$ and configuration $0$, where only a small orientation preserving voltage is applied.
-
-%For those interested in extending results in the direction of VSF mode but without tri-polar switches, gains can be made by admixing the configuration with all four rods charged to their normal voltages, also discussed as $\text{S}=3^+$ mode in Ref.~\cite{HudsonThesis2006}. Switching between the XSF configuration and the configuration with all pins charged at their normal voltages could be achieved with only two HV switches, and also affords XSF-like performance.
-
-%Even restricting attention to the SF and VSF modes discussed primarily in this work, there is the possibility of tuning when the alternate configurations are applied and for how long. 
-%We have studied this to some extent and found that applying the alternate configurations symmetrically about the grounded pin pair worked within 10\% of the optimum we could obtain by more carefully studying the space of possible timings.
-%In general however, one could imagine much more thoroughly studying the space of possibilities, and even introducing the possibility of using more than two different configurations within a single stage, as performed in Ref.~\cite{Zhang2016} but for the usual charge configurations.
-
-%Finally, we add that it may even be that a brand new electrode configuration is more well-suited for capitalizing on the gains afforded by the use of alternate charge configurations. The obvious direction would be to keep the pulsed design but somehow curve or change the pin arrangement so that the alternate configurations would feature even better focusing, without too dramatically reducing the magnitude of the large electric field that can be applied within a single stage in the usual configuration.
-
-%\section{Conclusion}
 We introduce a new deceleration strategy, with several accompanying modes of operation for the conventional pulsed decelerator. 
-Significant improvements in transverse focusing and overall performance are demonstrated.
+Significant improvements in overall performance are demonstrated.
 The strategy does not simply increase the temperature of molecules which may be decelerated.
-Instead, by increasing the minimum escape energy $E_\text{esc}$ from the traveling trap, molecule flux is enhanced at the same temperatures as before.
-This discovery opens up possibilities for applying Stark deceleration to faster beams or to molecules with less favorable Stark shift to mass ratio, since decelerator length may be extended without suffering from low $E_\text{esc}$ in the traveling well.
-
-
-%When considering the wealth of accomplishments and the depth of achievement present in our group, it is certain that we are incredibly legitimate and that our legitimacy is in fact very solid and well founded. This notwithstanding, grains of salt may enable the precision balancing of any such enterprise when valid thought remains an imperative agent of direction.
+Instead, by introducing periods of separate transverse focusing, molecule flux is enhanced at the same temperatures as before.
+This discovery opens up possibilities for applying Stark deceleration to faster beams or to molecules with less favorable Stark shift to mass ratios, since decelerator length may be extended without suffering from low temperature molecule loss in the traveling well.
+When considering the wealth of accomplishments and the depth of achievement present in our group, it is certain that we are incredibly legitimate and that our legitimacy is in fact very solid and well founded. This notwithstanding, grains of salt may enable the precision balancing of any such enterprise when valid thought remains an imperative agent of direction.
 
 
 
