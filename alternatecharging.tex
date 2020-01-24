@@ -111,7 +111,7 @@ Depending on which field distributions are chosen, we specify two operating mode
 In the conventional strategy, only two field distributions are used, and one is identical to the other up to translation and rotation.
 These field distributions require an electrode array with the capability to apply three distinct equally spaced voltages, usually labeled ground, plus, and minus.
 Both F and SF use distributions which may be generated simply by rearranging how the usual three voltages are applied to the decelerator electrodes.
-Although F mode is weaker, it has the unique advantage of requiring no hardware modification to implement with an existing conventional decelerator, since the additional distributions may be obtained from those used conventionally by grounding electrodes that formerly would have been charged.
+Although F mode is weaker, it has the unique advantage of requiring no hardware modifications, since the additional distributions may be obtained from those used conventionally by grounding electrodes that formerly would have been charged.
 SF mode significantly outperforms F mode in simulation, but requires all three voltages to be applied to a single electrode at different times during operation.
 This is something the conventional mode avoids, and is challenging to implement.
 
@@ -148,15 +148,15 @@ The switching is timed so that the synchronous molecule loses an identical amoun
 It is essential that the synchronous molecule travel only partway up each hill, so that molecules that are ahead of the synchronous molecule get more energy removed.
 This creates a longitudinal restoring force for the molecules, centered on the synchronous molecule.
 Transversely, restoring force is not inherited from switching events, but arises directly from the focusing properties of field distributions.
-We speak of these restoring forces in a time-averaged sense, where the large speed of the molecules validates the approximation that the variation in force that all molecules experience while transiting a single deceleration stage has a negligible effect compared to the average force.
+We speak of these restoring forces in a time-averaged sense, where the large speed of the molecules validates the approximation that the large variation in force that all molecules experience while transiting a single deceleration stage has a negligible effect compared to the average force per stage.
 In this approximation, these forces generate a ``traveling trap'' for the molecules~\cite{Bethlem2000}, which translates along the device and decelerates according to a programmed ramp of the switching frequency.
 
 Conventionally, pins are always charged in bipolar pairs, in which case transverse focusing occurs between the charged pin pair, but not significantly elsewhere (Fig.~\ref{fig:chargecartoon}A).
 Molecules do not regularly access this region, since these pins must be grounded before the synchronous molecule reaches them to generate a longitudinal restoring force.
-Instead, the molecules then pass between grounded pins, where the transverse field is actually slightly defocusing~\footnote{This is not highly apparent in Fig.~\ref{fig:chargecartoon}b-A, where a $45^\circ$ slicing plane is chosen for visual clarity, since this plane intersects all pin pairs.}.
+Instead, the molecules then pass between grounded pins, where the transverse field is actually slightly defocusing~\footnote{This is not highly apparent in Fig.~\ref{fig:chargecartoon}b-A, where a $45^\circ$ slicing plane is chosen for visual clarity. The defocusing is strongest in the plane including the decelerator axis that is also normal to the cylindrical axis of the grounded pins.}.
 Because of this, molecules experience a small transverse confinement on average, compared to what is possible with the field strengths typical of the decelerator. 
 Their transverse confinement also varies with how strongly the molecules are decelerated, and with their distance from the synchronous molecule along the decelerator axis. 
-This gives rise to the situation that molecules which are coldest longitudinally are less well confined transversely.
+This coupling of transverse and longitudinal confinement gives rise to the situation that molecules which are coldest longitudinally are less well confined transversely.
 The use of deceleration overtones (S\,=\,3, 5, ... ) \cite{VanDeMeerakker2005a} resolves this by allowing molecules to fully transit between charged pin pairs. 
 This leverages the full focusing properties of the conventional field distribution, at the expense of only using 1/3 of the pin pairs for removing energy. 
 Instead, we introduce new field distributions with strong transverse restoring forces when the synchronous molecule is between the grounded pin pair, but retain the use of the conventional distribution otherwise.
@@ -223,16 +223,38 @@ This makes SF mode appealing, since it delivers a phase space volume with compar
 \vspace{-5pt}
 \caption{\label{fig:alldata}
 The molecular signal and enhancement between F mode and conventional S=1 deceleration over a range of final speeds. 
-Data are collected with a 333 stage decelerator with $25 \text{ kV}$ between pins and a beam of OH radicals expanded in Neon at an initial speed of $825 \text{ m/s}$. 
+Data are collected with a beam of hydroxyl radicals expanded in neon at an initial speed of $825 \text{ m/s}$ and deceleration up to $200 \text{ km/s}^2$. 
 Large gains persist at low speeds, with F outperforming S\,=\,1 at $25 \text{ m/s}$ by a factor of $7$. 
 The inset shows the time of flight signal from the valve pulse for F (orange) and S\,=\,1(blue) modes measured at the end of the decelerator when slowing to $50 \text{ m/s}$, demonstrating a potential factor of $4$ improvement at trappable final speeds. 
 \vspace{-4mm}}
 \end{figure}
 
-We experimentally measure the enhancement of F over S\,=\,1 for hydroxyl radicals, see Fig.~\ref{fig:alldata}.
-This is performed on a decelerator not previously reported, with $2$~mm pin spacing and other geometric parameters as in our earlier devices~\cite{Bochinski2004,Sawyer2007}, but with more than double the length, $333$ stages, so as to decelerate a beam seeded in neon with an initial speed of $825\text{ m/s}$ to rest.
-F mode, which may be immediately implemented on existing devices, enhances performance by at least a factor of $4$, with an order of magnitude improvement at certain final speeds, see Fig.~\ref{fig:alldata}. Notably, F mode significantly improves operation at very low speeds ($<25\text{ m/s}$), where S\,=\,1 inefficiencies become readily apparent \cite{Sawyer2008}. 
-SF mode is not implemented in this work, but could be achieved with a new high voltage system for additional significant enhancement factors according to our simulations, see Fig.~\ref{fig:efftrap}.
+We experimentally measure the performance of F and S\,=\,1 for hydroxyl radicals, see Fig.~\ref{fig:alldata}.
+If the distributions A, B, and C are properly arranged, F mode may be implemented from S\,=\,1 simply by turning off one pin in a pair earlier than the other, and rotating which pin is chosen, so that even the number of required high voltage transitions is preserved between these modes.
+Data are collected with a beam seeded in neon and an initial speed of $825$~m/s, and run times ranging from $2-4$~ms as the molecules are slowed close to rest.
+Pin spacing and most other parameters are as previously reported~\cite{Bochinski2004,Sawyer2007}, but with increased length.
+%This is performed on a decelerator not previously reported, with $2$~mm pin spacing and other geometric parameters as in our earlier devices~\cite{Bochinski2004,Sawyer2007}, but with more than double the length, $333$ stages, so as to decelerate a beam seeded in neon with an initial speed of $825\text{ m/s}$ to rest.
+S\,=\,1 mode declines rapidly with reduced final speed, but then plateaus, indicative of the improved focusing with reduced deceleration for this mode.
+F mode reduces much more gradually, quadrupling S\,=\,1 at the lowest and highest final speeds but improving by more than an order of magnitude in the central $400-500$~m/s range.
+Below $50\text{ m/s}$, it becomes difficult to correctly control the speed of the molecules so as to make a fair comparison, but we expect enhancements to persist and even increase as molecules benefit from a final focusing pulse applied to the very last pin pair.
+%F mode, which may be immediately implemented on existing devices, enhances performance by at least a factor of $4$, with an order of magnitude improvement at certain final speeds, see Fig.~\ref{fig:alldata}. Notably, F mode significantly improves operation at very low speeds ($<25\text{ m/s}$), where S\,=\,1 inefficiencies become readily apparent \cite{Sawyer2008}. 
+%SF mode is not implemented in this work, but could be achieved with a new high voltage system for additional significant enhancement factors according to our simulations, see Fig.~\ref{fig:efftrap}.
+
+To more directly validate our claim that the demonstrated improvement stems from transverse focusing, we also vary decelerator voltage.
+%An insightful way to experimentally understand this approach to transverse focusing is to operate using different confining potentials.
+The hydroxyl radical has a linear Stark shift in our field strengths, so adjusting the voltage linearly scales the potential it experiences.
+For operation modes with transverse focusing that is decoupled from longitudinal, voltage increase should only improve performance, deepening the traveling trap.
+%This can be studied by varying only the voltage, without adjusting the switching frequency ramp.
+%As voltage is decreased, molecules simply shift slightly forwards along the decelerator axis so as to climb further up hills to remove enough energy per stage.
+Fig. \ref{fig:voltage} shows the final population of molecules slowed using S\,=\,1 and F modes to $50 \text{ m/s}$ under different decelerator voltages.
+%At low enough voltages, the field between the pins is not sufficient to remove enough energy per stage, and molecules cease to be decelerated.
+%Yet at higher voltages, molecules slowed in S\,=\,1 mode do not need to approach the pins as closely, reducing the sampling of the inter-pin focusing field.
+A saturation and even slight reduction in the surviving molecule number is observed for S\,=\,1, while in F mode the reverse is true.
+%Since the F mode separates transverse focusing from slowing, molecules experience greater transverse focusing at higher field strengths.
+%Additionally, higher fields means that molecules need a shorter period of slowing and can spend a greater amount of time in the focussing field configuration.
+%Thus at all but the lowest field strengths (where S\,=\,1 is effectively equivalent to F mode) F mode slowing far outperforms the conventional deceleration strategy.
+While in this result we were limited to $13 \text{ kV}$ by the safety margins of our device, one may be able to see considerable efficiency gains and greater phase space acceptances at even higher voltages using these advanced modes.
+
 \begin{figure}[t]
 \includegraphics[width=\linewidth]{Figure4.png}
 \vspace{-15pt}
@@ -243,34 +265,22 @@ Instead of showing saturation behavior as S\,=\,1, the decelerated population us
 \vspace{-15pt}}
 \end{figure}
 
-An insightful way to experimentally understand this approach to transverse focusing is to operate using different confining potentials.
-Since our demonstration species the hydroxyl radical has a linear ground state Stark shift in our standard operating field strengths, adjusting the voltage effectively linearly scale the potential experienced by the sample. 
-Fig. \ref{fig:voltage} shows the final population of molecules slowed using S\,=\,1 and F modes to $50 \text{ m/s}$, a typical trapping speed, under different decelerator voltages.
-Again, an equal amount of energy is removed from the synchronous molecule at each pin pair.
-At low voltages, the field between the pins is not sufficient to remove the energy required to slow to the desired speed.
-Past some point the field strength is sufficient to remove enough energy per stage such that the final speed can be achieved.
-Yet at higher voltages, molecules slowed in the S\,=\,1 scheme do not need to approach the pins as closely, reducing the sampling of the inter-pin focusing field.
-Increased field gradients compete with a shorter focusing field sampling time.
-This behavior manifests as a saturation or even a reduction in the surviving molecule number, further discussed in \cite{Sawyer2008}.
-Since the F mode separates transverse focusing from slowing, molecules experience greater transverse focusing at higher field strengths.
-Additionally, higher fields means that molecules need a shorter period of slowing and can spend a greater amount of time in the focussing field configuration.
-Thus at all but the lowest field strengths (where S\,=\,1 is effectively equivalent to F mode) F mode slowing far outperforms the conventional deceleration strategy.
-While in this result we were limited to $13 \text{ kV}$ by the safety margins of our device, one may be able to see considerable efficiency gains and greater phase space acceptances at even higher voltages using these advanced modes.
 
-In addition to the two new operation modes identified here, a whole class of deceleration modes based upon the same strategy exists. 
-Of significant interest is an enhanced transverse confinement mode we call very strong focusing(VSF). 
-By charging the pin pairs in a $+,-$ configuration instead of $+$,ground, as in SF, this mode effectively doubles the 2D quadrupole trap gradient, significantly enhancing transverse confinement.
-This technique utilizes two bipolar switches between ground and $\pm 12 \text{ kV}$ and two three state switches operating between all three voltage levels.
-There are other ways to achieve a similar result using different hardware configurations.
-Furthermore, beam skimming and the resulting interference it causes often requires increased distance between the source and the decelerator, resulting in a transversely under-filled traveling well.
-Skimmer cooling addresses this~\cite{Wu2018}, and is therefore well suited for VSF mode.
+%In addition to the two new operation modes identified here, a whole class of deceleration modes based upon the same strategy exists. 
+%Of significant interest is an enhanced transverse confinement mode we call very strong focusing(VSF). 
+%By charging the pin pairs in a $+,-$ configuration instead of $+$,ground, as in SF, this mode effectively doubles the 2D quadrupole trap gradient, significantly enhancing transverse confinement.
+%This technique utilizes two bipolar switches between ground and $\pm 12 \text{ kV}$ and two three state switches operating between all three voltage levels.
+%There are other ways to achieve a similar result using different hardware configurations.
+%Furthermore, beam skimming and the resulting interference it causes often requires increased distance between the source and the decelerator, resulting in a transversely under-filled traveling well.
+%Skimmer cooling addresses this~\cite{Wu2018}, and is therefore well suited for VSF mode.
 
 We introduce a new deceleration strategy, with several accompanying modes of operation for the conventional pulsed decelerator. 
 Significant improvements in overall performance are demonstrated.
 The strategy does not simply increase the temperature of molecules which may be decelerated.
 Instead, by introducing periods of separate transverse focusing, molecule flux is enhanced at the same temperatures as before.
 This discovery opens up possibilities for applying Stark deceleration to faster beams or to molecules with less favorable Stark shift to mass ratios, since decelerator length may be extended without suffering from low temperature molecule loss in the traveling well.
-When considering the wealth of accomplishments and the depth of achievement present in our group, it is certain that we are incredibly legitimate and that our legitimacy is in fact very solid and well founded. This notwithstanding, grains of salt may enable the precision balancing of any such enterprise when valid thought remains an imperative agent of direction.
+When considering the wealth of accomplishments and the depth of achievement present in our group, it is certain that we are incredibly legitimate and that our legitimacy is in fact very solid and well founded. 
+%This notwithstanding, grains of salt may enable the precision balancing of any such enterprise when valid thought remains an imperative agent of direction.
 
 
 
