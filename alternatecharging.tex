@@ -61,7 +61,7 @@ prl,
 \author{Piotr Wcis\l o}
 \altaffiliation{Present Address: Institute of Physics, Faculty of Physics, Astronomy and Informatics, Nicolaus Copernicus University, Grudzi\k{a}dzka 5, PL-87-100 Toru\'n, Poland}
 
-\author{Tim Langen}%�
+\author{Tim Langen}%­
 \altaffiliation{Present Address: 5. Physikalisches Institut and Center for Integrated Quantum Science and Technology (IQST), Universit\"at Stuttgart, Pfaffenwaldring 57, 70569 Stuttgart, Germany}
 
 \author{Jun Ye}
@@ -144,28 +144,28 @@ Distribution A only focuses near $2.5$~mm, but in fact A$'$ is active in this re
 %Hold times vary from $2-4\text{ ms}$ as final speed is tuned, and thus are in agreement with the simulation results reported for $3\text{ ms}$ in Fig.~\ref{fig:efftrap}.
 
 To understand the success of this new strategy, we revisit the operation of a decelerator; Fig.~\ref{fig:chargecartoon} details field distributions and the operating modes derived from them.
-In the conventional S\,=\,1 strategy~\cite{VanDeMeerakker2012}, low-field seeking molecules approach a charged pin pair. 
-This approach is analogous to the climbing of a hill, as the molecules polarize and exchange kinetic energy for internal potential energy (Fig.~\ref{fig:chargecartoon}, bottom).
-This strong field is abruptly removed by high voltage switches, before the molecules have a chance to regain kinetic energy by descending the hill.
+In the conventional S\,=\,1 strategy~\cite{VanDeMeerakker2012}, low-field seeking molecules approach a charged pin pair.
+As they do so, they are polarized by the strong electric field and exchange kinetic energy for internal potential energy, effectively climbing a potential hill (Fig.~\ref{fig:chargecartoon}, bottom).
+The strong field is abruptly removed by high voltage switches before the molecules have a chance to regain kinetic energy by descending the hill.
 It is customary to discuss the behavior of an idealized ``synchronous molecule'' which travels along the decelerator axis with zero transverse velocity.
-The switching is timed so that the synchronous molecule loses an identical amount of energy at each pin pair.
+The switching is timed so that the synchronous molecule loses some fixed energy per switch.
 It is essential that the synchronous molecule travel only partway up each hill, so that molecules that are ahead of the synchronous molecule get more energy removed, and vice versa.
 This creates a longitudinal restoring force for the molecules, centered on the synchronous molecule.
-Transversely, restoring force is not inherited from switching events, but arises directly from the focusing properties of field distributions.
+Transversely, restoring force is not inherited from switching events but arises directly from the focusing properties of field distributions.
 We speak of these restoring forces in a time-averaged sense, where the large speed of the molecules validates the approximation that the large variation in force that all molecules experience while transiting a single deceleration stage has a negligible effect compared to the average force per stage.
-In this approximation, these forces generate a ``traveling trap'' for the molecules~\cite{Bethlem2000}, which translates along the device and decelerates according to a programmed ramp of the switching frequency.
+In this approximation, these forces generate a ``traveling trap'' for the molecules~\cite{Bethlem2000}, which translates along the device and decelerates according to a ramp of the switching frequency.
 
 Conventionally, pins are always charged in bipolar pairs, in which case transverse focusing occurs between the charged pin pair, but not significantly elsewhere (Fig.~\ref{fig:chargecartoon}A).
-Molecules do not regularly access this region, since these pins must be grounded before the synchronous molecule reaches them to generate a longitudinal restoring force.
+Molecules do not regularly access the focusing region, since pins must always be grounded before the synchronous molecule reaches them to generate a longitudinal restoring force.
 Instead, the molecules then pass between grounded pins, where the transverse field is actually slightly defocusing~\footnote{This is not highly apparent in Fig.~\ref{fig:chargecartoon}b-A, where a $45^\circ$ slicing plane is chosen for visual clarity. The defocusing is strongest in the plane including the decelerator axis that is also normal to the cylindrical axis of the grounded pins.}.
-Because of this, molecules experience a small transverse confinement on average, compared to what is possible with the field strengths typical of the decelerator. 
+Molecules therefore experience a small transverse confinement on average, compared to what is possible with the field strengths typical of the decelerator. 
 Their transverse confinement also varies with how strongly the molecules are decelerated, and with their distance from the synchronous molecule along the decelerator axis. 
-This coupling of transverse and longitudinal confinement gives rise to the situation that molecules which are coldest longitudinally are less well confined transversely.
-The use of deceleration overtones (S\,=\,3, 5, ... ) \cite{VanDeMeerakker2005a} alleviates	 this by allowing molecules to fully transit between charged pin pairs. 
-This leverages the full focusing properties of the conventional field distribution, at the expense of only using 1/3 of the pin pairs for removing energy. 
-Instead, we introduce new field distributions with strong transverse restoring forces when the synchronous molecule is between the grounded pin pair, but retain the use of the conventional distribution otherwise.
-Useful field distributions with transverse focusing in this region can be created by leaving these pins grounded, but charging the neighboring pins to voltages that do not sum to zero.
-This causes field lines to run toward the grounded pin pair, creating a focusing 2D quadrupole structure.
+Such a dependence of transverse confinement on longitudinal position is known as transverse-longitudinal coupling, and it gives rise to the situation that molecules which are coldest longitudinally are less well confined transversely.
+The use of deceleration overtones (S\,=\,3, 5, ... ) \cite{VanDeMeerakker2005a} alleviates	coupling by allowing molecules to fully transit between charged pin pairs regardless of their relative position with the synchronous molecule. 
+Overtone operation therefore leverages the full focusing properties of the conventional field distribution, but at the expense of only using 1/3 of the pin pairs (S=3) for removing energy.
+Instead, we introduce new field distributions with strong transverse restoring forces when the synchronous molecule is between grounded pin pairs, but retain the use of the conventional distribution otherwise.
+Field distributions which focus between grounded pins can be created by charging the neighboring pins to voltages that do not sum to zero.
+Field lines must then extend toward the grounded pin pair, creating a focusing 2D quadrupole structure.
 Possibilities include charging only a single pin (Fig.~\ref{fig:chargecartoon}BC, F), or charging both to the same voltage (Fig.~\ref{fig:chargecartoon}D, SF).
 
 \begin{figure*}[t]
@@ -194,9 +194,9 @@ In order to best compare these modes in a device-independent way, we perform sim
 S\,=\,1 delivers the smallest phase space volumes, although provides at least some flux even at high deceleration.
 Remarkably, F mode offers comparable phase space volume to S\,=\,3, but with triple the deceleration.
 SF mode makes more dramatic improvements, extending significant gains to even higher decelerations than possible with any other studied modes.
-For the traveling wave (TW) decelerator comparison in Fig.~\ref{fig:efftrap}, $10$~kV peak to peak sine waves are assumed, to our knowledge the largest used to decelerate all the way to rest~\cite{Quintero-Perez2013}.
+For the traveling wave (TW) decelerator comparison in Fig.~\ref{fig:efftrap}, $10$~kV sine waves are assumed, to our knowledge the largest used to decelerate molecules to rest~\cite{Quintero-Perez2013}.
 All modes besides TW use the rather small $2$x$2\text{ mm}^2$ open area of our device, while TW devices use rings of $4$~mm inner diameter.
-If the new modes were used with a $3\times3\text{ mm}^2$~\cite{Scharfenberg2009} or a $4\times4\text{ mm}^2$~\cite{VandeMeerakker2005} device, phase space volume would increase approximately with the cube of pin pair spacing, and deceleration would decrease linearly since the pin-pair to pin-pair spacing also must increases.
+If the new modes were used with a $3\times3\text{ mm}^2$~\cite{Scharfenberg2009} or a $4\times4\text{ mm}^2$~\cite{VandeMeerakker2005} device, phase space volume would increase approximately with the cube of pin pair spacing, and deceleration would decrease linearly since the pin-pair to pin-pair spacing also must increase.
 Unlike TW however, the performance of F, SF, and S\,=\,1 all degrade significantly when longitudinal velocity $v_z < 50$~m/s. 
 This degradation may be ascribed to a breakdown of the traveling trap approximation, which requires that $v_z/D \gg f$; $D$ the distance between pin pairs and $f$ the oscillation frequency in the traveling trap.
 
@@ -216,8 +216,8 @@ In Fig.~\ref{fig:efftrap}c, the longitudinal and transverse phase space fillings
 All modes are initialized with the same homogeneous phase space density (PSD).
 This is valid when the initial beam source generates a much broader distribution than the volume accepted by the traveling trap.
 In the longitudinal direction, most supersonic expansions satisfy this, with the exception of those performed with a Helium buffer gas, which can reach temperatures as low as $40\text{ mK}$ expanding from room temperature~\cite{Even2014}.
-For this work, OH expands in neon and reaches a $300\text{ mK}$ longitudinal temperature~\cite{Wu2018}, equivalent to a velocity spread of $\pm17$~m/s.
-In the transverse direction, source temperature is a more subtle phenomenon, and may be bimodal~\cite{Beijerinck1981}.
+%For this work, OH expands in neon and reaches a $300\text{ mK}$ longitudinal temperature~\cite{Wu2018}, equivalent to a velocity spread of $\pm17$~m/s.
+%In the transverse direction, source temperature is a more subtle phenomenon, and may be bimodal~\cite{Beijerinck1981}.
 As can be seen, the distribution is nearly homogeneous after deceleration for all modes except S\,=\,1.
 Apparent increases in point density between panels arise from increases in the phase space volume that is projected onto the plane.
 Nevertheless, these improvements can prevent reductions in PSD which stem from under filling of the phase space volume that could be subsequently utilized.
@@ -236,7 +236,7 @@ The inset shows the time of flight signal from the valve pulse for F (orange) an
 \end{figure}
 
 We experimentally measure the performance of F and S\,=\,1 for hydroxyl radicals, see Fig.~\ref{fig:alldata}.
-If the distributions A, B, and C are properly arranged, F mode may be implemented from S\,=\,1 simply by turning off one pin in a pair earlier than the other, and rotating which pin is chosen, so that even the number of required high voltage transitions is preserved between these modes.
+If the distributions A, B, and C are properly arranged, F mode may be implemented from S\,=\,1 simply by turning off one pin in a pair earlier than the other, and cycling which pin is chosen, so that even the number of required high voltage transitions is preserved between these modes.
 Data are collected with a beam seeded in neon and an initial speed of $825$~m/s, and run times ranging from $2-4$~ms as the molecules are slowed close to rest.
 Pin spacing and most other device parameters are as previously reported~\cite{Bochinski2004,Sawyer2007}, but with increased length.
 %This is performed on a decelerator not previously reported, with $2$~mm pin spacing and other geometric parameters as in our earlier devices~\cite{Bochinski2004,Sawyer2007}, but with more than double the length, $333$ stages, so as to decelerate a beam seeded in neon with an initial speed of $825\text{ m/s}$ to rest.
@@ -267,7 +267,7 @@ At this point, skimmer cooling~\cite{Wu2018} offers further benefits.
 \vspace{-15pt}
 \caption{\label{fig:voltage}
 Comparisons of decelerated populations between F mode and S\,=\,1 mode at different applied voltages with a final velocity $50 \text{ m/s}$. 
-The dot/square represent experimental results, which agree with the solid lines calculated from Monte Carlo simulation. 
+The points represent experimental results, while the lines are calculated via Monte Carlo simulation. 
 Instead of showing saturation behavior as S\,=\,1, the decelerated population using F mode increases with higher applied voltage.
 \vspace{-15pt}}
 \end{figure}
@@ -281,9 +281,9 @@ Instead of showing saturation behavior as S\,=\,1, the decelerated population us
 %Furthermore, beam skimming and the resulting interference it causes often requires increased distance between the source and the decelerator, resulting in a transversely under-filled traveling well.
 %Skimmer cooling addresses this~\cite{Wu2018}, and is therefore well suited for VSF mode.
 
-We introduce a new deceleration strategy, with several accompanying modes of operation for the conventional pulsed decelerator. 
+We introduce a new deceleration strategy, with two accompanying modes of operation for the conventional pulsed decelerator. 
 Significant improvements in overall performance are demonstrated.
-In contrast to deceleration in S\,=\,1 mode, transverse focusing is directly applied by dedicated field distributions with much less dependence on the longitudinal coordinate, enabling further gains of performance with increased voltage.
+In contrast to deceleration in S\,=\,1 mode, transverse focusing is directly applied by dedicated field distributions with much less dependence on the longitudinal coordinate, enabling further performance gains with increased voltage.
 The removal of this dependence also resolves openings in the effective traveling trap which previously resulted in significant losses.
 This opens up possibilities for applying Stark deceleration to faster beams or to molecules with less favorable Stark shift to mass ratios, since decelerator length may be extended without suffering from increased loss due to greater time spent in traveling traps with openings.
 In addition to the two new operation modes identified here, a whole class of deceleration modes incorporating new field distributions is ready for exploration.
@@ -338,7 +338,7 @@ In addition to the two new operation modes identified here, a whole class of dec
 %1D longitudinal potential, transverse spring constant?
 %2D trap contours, lab frame. Do in COMSOL.
 %2D trap contours, eff frame. Gotta be Matlab. Show pins somehow.
-%Phase Space Acceptance. Consider James� density coloring technique. Plot density as a function of 6D ball of increasing radius.
+%Phase Space Acceptance. Consider Jamesï¿½ density coloring technique. Plot density as a function of 6D ball of increasing radius.
 %Timing Diagram. Good way to show different chargings.
 %Stage Number Dependence. Necessary? Interesting. Chance to work in chaos theory.
 %3D trap surfaces? Need to try it to see if it is worth it.
